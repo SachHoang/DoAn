@@ -212,7 +212,7 @@ namespace DoAn
                 for (int i = 0; i < lb.Items.Count; i++)
                 {
                     var colNam1 = ((DataGridViewColumn)lb.Items[i]).Name;
-                    gv.Columns[colNam1].DataPropertyName = dt.Columns[0].ToString();
+                    gv.Columns[colNam1].DataPropertyName = dt.Columns[i].ToString();
                 }
 
                 return gv.ToString();

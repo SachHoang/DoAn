@@ -58,11 +58,13 @@ namespace DoAn
         private void btnHome_Click(object sender, EventArgs e)
         {
             AddControl(new Home());
+            label2.Text = btnHome.Text;
         }
 
         private void btnCategory_Click(object sender, EventArgs e)
         {
             AddControl(new frmCategoryView());
+            label2.Text = btnCategory.Text;
         }
     }
 }
