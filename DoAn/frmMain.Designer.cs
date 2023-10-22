@@ -34,15 +34,15 @@
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
+            this.btnHome = new System.Windows.Forms.Button();
+            this.btnCategory = new System.Windows.Forms.Button();
+            this.btnProduct = new System.Windows.Forms.Button();
+            this.btnTable = new System.Windows.Forms.Button();
+            this.btnStaff = new System.Windows.Forms.Button();
+            this.btnPOS = new System.Windows.Forms.Button();
+            this.btnKitchen = new System.Windows.Forms.Button();
+            this.btnSetting = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -50,15 +50,15 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
-            this.panel1.Controls.Add(this.button9);
-            this.panel1.Controls.Add(this.button8);
-            this.panel1.Controls.Add(this.button7);
-            this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnLogout);
+            this.panel1.Controls.Add(this.btnSetting);
+            this.panel1.Controls.Add(this.btnKitchen);
+            this.panel1.Controls.Add(this.btnPOS);
+            this.panel1.Controls.Add(this.btnStaff);
+            this.panel1.Controls.Add(this.btnTable);
+            this.panel1.Controls.Add(this.btnProduct);
+            this.panel1.Controls.Add(this.btnCategory);
+            this.panel1.Controls.Add(this.btnHome);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -81,7 +81,7 @@
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(200, 0);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(700, 108);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(700, 90);
             this.flowLayoutPanel2.TabIndex = 0;
             // 
             // pictureBox2
@@ -106,123 +106,123 @@
             this.label1.Text = "Quản Lý Nhà Hàng";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button1
+            // btnHome
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
-            this.button1.ForeColor = System.Drawing.Color.Transparent;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(0, 191);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(200, 44);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Home";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
+            this.btnHome.ForeColor = System.Drawing.Color.Transparent;
+            this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
+            this.btnHome.Location = new System.Drawing.Point(0, 191);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(200, 44);
+            this.btnHome.TabIndex = 2;
+            this.btnHome.Text = "Home";
+            this.btnHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnHome.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btnCategory
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
-            this.button2.ForeColor = System.Drawing.Color.Transparent;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(0, 241);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(200, 44);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Category";
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnCategory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
+            this.btnCategory.ForeColor = System.Drawing.Color.Transparent;
+            this.btnCategory.Image = ((System.Drawing.Image)(resources.GetObject("btnCategory.Image")));
+            this.btnCategory.Location = new System.Drawing.Point(0, 241);
+            this.btnCategory.Name = "btnCategory";
+            this.btnCategory.Size = new System.Drawing.Size(200, 44);
+            this.btnCategory.TabIndex = 2;
+            this.btnCategory.Text = "Category";
+            this.btnCategory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCategory.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // btnProduct
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
-            this.button3.ForeColor = System.Drawing.Color.Transparent;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(0, 291);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(200, 44);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Product";
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
+            this.btnProduct.ForeColor = System.Drawing.Color.Transparent;
+            this.btnProduct.Image = ((System.Drawing.Image)(resources.GetObject("btnProduct.Image")));
+            this.btnProduct.Location = new System.Drawing.Point(-3, 291);
+            this.btnProduct.Name = "btnProduct";
+            this.btnProduct.Size = new System.Drawing.Size(200, 44);
+            this.btnProduct.TabIndex = 2;
+            this.btnProduct.Text = "Product";
+            this.btnProduct.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnProduct.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // btnTable
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
-            this.button4.ForeColor = System.Drawing.Color.Transparent;
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(0, 341);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(200, 44);
-            this.button4.TabIndex = 2;
-            this.button4.Text = "Table";
-            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnTable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
+            this.btnTable.ForeColor = System.Drawing.Color.Transparent;
+            this.btnTable.Image = ((System.Drawing.Image)(resources.GetObject("btnTable.Image")));
+            this.btnTable.Location = new System.Drawing.Point(0, 341);
+            this.btnTable.Name = "btnTable";
+            this.btnTable.Size = new System.Drawing.Size(200, 44);
+            this.btnTable.TabIndex = 2;
+            this.btnTable.Text = "Table";
+            this.btnTable.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnTable.UseVisualStyleBackColor = false;
             // 
-            // button5
+            // btnStaff
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
-            this.button5.ForeColor = System.Drawing.Color.Transparent;
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.Location = new System.Drawing.Point(0, 391);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(200, 44);
-            this.button5.TabIndex = 2;
-            this.button5.Text = "Staff";
-            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
+            this.btnStaff.ForeColor = System.Drawing.Color.Transparent;
+            this.btnStaff.Image = ((System.Drawing.Image)(resources.GetObject("btnStaff.Image")));
+            this.btnStaff.Location = new System.Drawing.Point(0, 391);
+            this.btnStaff.Name = "btnStaff";
+            this.btnStaff.Size = new System.Drawing.Size(200, 44);
+            this.btnStaff.TabIndex = 2;
+            this.btnStaff.Text = "Staff";
+            this.btnStaff.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnStaff.UseVisualStyleBackColor = false;
             // 
-            // button6
+            // btnPOS
             // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
-            this.button6.ForeColor = System.Drawing.Color.Transparent;
-            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.Location = new System.Drawing.Point(0, 441);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(200, 44);
-            this.button6.TabIndex = 2;
-            this.button6.Text = "POS";
-            this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button6.UseVisualStyleBackColor = false;
+            this.btnPOS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
+            this.btnPOS.ForeColor = System.Drawing.Color.Transparent;
+            this.btnPOS.Image = ((System.Drawing.Image)(resources.GetObject("btnPOS.Image")));
+            this.btnPOS.Location = new System.Drawing.Point(0, 441);
+            this.btnPOS.Name = "btnPOS";
+            this.btnPOS.Size = new System.Drawing.Size(200, 44);
+            this.btnPOS.TabIndex = 2;
+            this.btnPOS.Text = "POS";
+            this.btnPOS.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPOS.UseVisualStyleBackColor = false;
             // 
-            // button7
+            // btnKitchen
             // 
-            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
-            this.button7.ForeColor = System.Drawing.Color.Transparent;
-            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.Location = new System.Drawing.Point(0, 491);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(200, 44);
-            this.button7.TabIndex = 2;
-            this.button7.Text = "Kitchen";
-            this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button7.UseVisualStyleBackColor = false;
+            this.btnKitchen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
+            this.btnKitchen.ForeColor = System.Drawing.Color.Transparent;
+            this.btnKitchen.Image = ((System.Drawing.Image)(resources.GetObject("btnKitchen.Image")));
+            this.btnKitchen.Location = new System.Drawing.Point(0, 491);
+            this.btnKitchen.Name = "btnKitchen";
+            this.btnKitchen.Size = new System.Drawing.Size(200, 44);
+            this.btnKitchen.TabIndex = 2;
+            this.btnKitchen.Text = "Kitchen";
+            this.btnKitchen.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnKitchen.UseVisualStyleBackColor = false;
             // 
-            // button8
+            // btnSetting
             // 
-            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
-            this.button8.ForeColor = System.Drawing.Color.Transparent;
-            this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
-            this.button8.Location = new System.Drawing.Point(0, 541);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(200, 44);
-            this.button8.TabIndex = 2;
-            this.button8.Text = "Setting";
-            this.button8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button8.UseVisualStyleBackColor = false;
+            this.btnSetting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
+            this.btnSetting.ForeColor = System.Drawing.Color.Transparent;
+            this.btnSetting.Image = ((System.Drawing.Image)(resources.GetObject("btnSetting.Image")));
+            this.btnSetting.Location = new System.Drawing.Point(0, 541);
+            this.btnSetting.Name = "btnSetting";
+            this.btnSetting.Size = new System.Drawing.Size(200, 44);
+            this.btnSetting.TabIndex = 2;
+            this.btnSetting.Text = "Setting";
+            this.btnSetting.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSetting.UseVisualStyleBackColor = false;
             // 
-            // button9
+            // btnLogout
             // 
-            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
-            this.button9.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button9.ForeColor = System.Drawing.Color.Transparent;
-            this.button9.Image = ((System.Drawing.Image)(resources.GetObject("button9.Image")));
-            this.button9.Location = new System.Drawing.Point(0, 631);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(200, 44);
-            this.button9.TabIndex = 2;
-            this.button9.Text = "Log Out";
-            this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button9.UseVisualStyleBackColor = false;
+            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
+            this.btnLogout.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnLogout.ForeColor = System.Drawing.Color.Transparent;
+            this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
+            this.btnLogout.Location = new System.Drawing.Point(0, 631);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(200, 44);
+            this.btnLogout.TabIndex = 2;
+            this.btnLogout.Text = "Log Out";
+            this.btnLogout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLogout.UseVisualStyleBackColor = false;
             // 
             // frmMain
             // 
@@ -238,6 +238,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMain";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmMain_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
@@ -250,15 +251,15 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button btnSetting;
+        private System.Windows.Forms.Button btnKitchen;
+        private System.Windows.Forms.Button btnPOS;
+        private System.Windows.Forms.Button btnStaff;
+        private System.Windows.Forms.Button btnTable;
+        private System.Windows.Forms.Button btnProduct;
+        private System.Windows.Forms.Button btnCategory;
+        private System.Windows.Forms.Button btnLogout;
     }
 }

@@ -29,10 +29,15 @@ namespace DoAn
             if (dt.Rows.Count > 0)
             {
                 isValid = true;
+                USER = dt.Rows[0][uName].ToString();
             }
             return isValid;
         }*/
-        public class MyContext : DbContext
+
+
+
+
+        /*public class MyContext : DbContext
         {
             public DbSet<User> Users { get; set; }
         }
@@ -53,9 +58,50 @@ namespace DoAn
                     return context.Users.Any(u => u.Username == user && u.Upass == pass);
                 }
                 bool isValid = UserHelper.IsValidUser(user, pass);
+
+                if()
             }
         }
-       
 
+        public static string user;
+        public static string USER
+        {
+            get { return user; }
+            private set { user = value; }
+        }
+       */
+
+
+
+
+        public class User
+        {
+            public int Id { get; set; }
+            public string Username { get; set; }
+            public string Password { get; set; }
+        }
+
+        public class MyDbContext : DbContext
+        {
+            public MyDbContext() : base("Data Source=localhost;Initial Catalog=DoAN;Integrated Security=True")
+            {
+            }
+
+            public DbSet<User> Users { get; set; }
+        }
+
+        public static bool IsValidUser(string user, string pass)
+        {
+            using (Model1 context = new Model1())
+            {
+                var userEntity = context.users.SingleOrDefault(u => u.username == user && u.upass == pass);
+                if (userEntity != null)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
     }
 }
