@@ -8,7 +8,6 @@ namespace DoAn.Database
 
     public partial class user
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int userID { get; set; }
 
         [Required]
@@ -23,7 +22,6 @@ namespace DoAn.Database
         [StringLength(50)]
         public string uName { get; set; }
 
-        [Required]
         [StringLength(20)]
         public string uPhone { get; set; }
     }
