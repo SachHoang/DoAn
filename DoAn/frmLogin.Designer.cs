@@ -52,7 +52,7 @@
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(389, 233);
-            this.panel1.TabIndex = 0;
+            this.panel1.TabIndex = 4;
             // 
             // pictureBox1
             // 
@@ -72,7 +72,7 @@
             this.label3.Location = new System.Drawing.Point(12, 185);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(216, 23);
-            this.label3.TabIndex = 2;
+            this.label3.TabIndex = 0;
             this.label3.Text = "Nhập thông tin đăng nhập";
             // 
             // label1
@@ -81,7 +81,7 @@
             this.label1.Location = new System.Drawing.Point(48, 257);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(90, 23);
-            this.label1.TabIndex = 1;
+            this.label1.TabIndex = 5;
             this.label1.Text = "UserName";
             // 
             // txtUser
@@ -90,7 +90,7 @@
             this.txtUser.Location = new System.Drawing.Point(52, 293);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(260, 38);
-            this.txtUser.TabIndex = 2;
+            this.txtUser.TabIndex = 0;
             // 
             // label2
             // 
@@ -98,7 +98,7 @@
             this.label2.Location = new System.Drawing.Point(48, 345);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(83, 23);
-            this.label2.TabIndex = 1;
+            this.label2.TabIndex = 6;
             this.label2.Text = "PassWord";
             // 
             // txtPass
@@ -107,7 +107,8 @@
             this.txtPass.Location = new System.Drawing.Point(52, 380);
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(260, 38);
-            this.txtPass.TabIndex = 2;
+            this.txtPass.TabIndex = 1;
+            this.txtPass.UseSystemPasswordChar = true;
             // 
             // button1
             // 
@@ -115,7 +116,7 @@
             this.button1.Location = new System.Drawing.Point(185, 437);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(127, 51);
-            this.button1.TabIndex = 3;
+            this.button1.TabIndex = 2;
             this.button1.Text = "Login";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
