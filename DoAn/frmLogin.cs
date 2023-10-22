@@ -25,7 +25,7 @@ namespace DoAn
             gd.ShowDialog();
         }
 
-        private void btnLogin_Click_1(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             if (MainClass.UserHelper.IsValidUser(txtUser.Text, txtPass.Text) == true)
             {
@@ -37,11 +37,11 @@ namespace DoAn
                 Thread thread = new Thread(new ThreadStart(ShowGiaodien)); // Khởi tạo luồng mới
                 thread.Start(); //Khởi chạy luôngf
                 this.Close();
-                
+
             }
         }
 
-        private void btnClose_Click_1(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
