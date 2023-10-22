@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DoAn.Database;
 
 namespace DoAn
 {
@@ -27,7 +28,14 @@ namespace DoAn
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (MainClass.UserHelper.IsValidUser(txtUser.Text, txtPass.Text) == true)
+            string username = "admin";
+            string password = "123";
+
+            // Lấy tên người dùng và mật khẩu được nhập
+            string inputUsername = txtUser.Text;
+            string inputPassword = txtPass.Text;
+
+            if (MainClass.UserHelper.IsValidUser(inputUsername, inputPassword))
             {
                 MessageBox.Show("Bạn nhập sai TK hoặc MK mời nhập lại ");
                 return;
@@ -37,7 +45,6 @@ namespace DoAn
                 Thread thread = new Thread(new ThreadStart(ShowGiaodien)); // Khởi tạo luồng mới
                 thread.Start(); //Khởi chạy luôngf
                 this.Close();
-
             }
         }
 
