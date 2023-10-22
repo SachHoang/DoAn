@@ -79,7 +79,7 @@
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(70, 24);
+            this.btnClose.Size = new System.Drawing.Size(70, 28);
             this.btnClose.Text = "Đóng";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
@@ -88,7 +88,7 @@
             this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
             this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(57, 24);
+            this.toolStripButton4.Size = new System.Drawing.Size(57, 28);
             this.toolStripButton4.Text = "Lưu";
             // 
             // btnUpdate
@@ -96,7 +96,7 @@
             this.btnUpdate.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdate.Image")));
             this.btnUpdate.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(58, 24);
+            this.btnUpdate.Size = new System.Drawing.Size(58, 28);
             this.btnUpdate.Text = "Sửa";
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
@@ -105,7 +105,7 @@
             this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
             this.btnDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(59, 24);
+            this.btnDelete.Size = new System.Drawing.Size(59, 28);
             this.btnDelete.Text = "Xóa";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
@@ -114,7 +114,7 @@
             this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
             this.btnAdd.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(70, 24);
+            this.btnAdd.Size = new System.Drawing.Size(70, 28);
             this.btnAdd.Text = "Thêm";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
@@ -124,7 +124,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 130);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1186, 452);
+            this.panel2.Size = new System.Drawing.Size(1186, 448);
             this.panel2.TabIndex = 22;
             // 
             // dgvKH
@@ -143,7 +143,7 @@
             this.dgvKH.RowHeadersWidth = 51;
             this.dgvKH.RowTemplate.Height = 24;
             this.dgvKH.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvKH.Size = new System.Drawing.Size(1186, 452);
+            this.dgvKH.Size = new System.Drawing.Size(1186, 448);
             this.dgvKH.TabIndex = 14;
             this.dgvKH.TabStop = false;
             this.dgvKH.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKH_CellContentClick);
@@ -211,9 +211,9 @@
             this.btnUpdate,
             this.toolStripButton4,
             this.btnClose});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 582);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 578);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1186, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(1186, 31);
             this.toolStrip1.Stretch = true;
             this.toolStrip1.TabIndex = 23;
             this.toolStrip1.TabStop = true;

@@ -99,5 +99,6 @@ namespace QLNH_DA
             OpenChildForm(new DoanhThu());
             label1.Text = btnDT.Text;
         }
+
     }
 }
