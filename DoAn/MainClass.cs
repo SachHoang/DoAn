@@ -9,11 +9,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
 using static DoAn.MainClass;
-
+using System.Collections;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Security.Cryptography.X509Certificates;
+using System.Xml.Linq;
+using DoAn.Model;
 namespace DoAn
 {
     internal class MainClass
     {
+
         /*public static readonly string con_string = "Data Source=localhost;Initial Catalog=DoAN;Integrated Security=True";  
         public static SqlConnection con = new SqlConnection(con_string);
         public  static bool IsValidUser(string user, string pass)
@@ -69,8 +75,57 @@ namespace DoAn
             get { return user; }
             private set { user = value; }
         }
-       */
+        public static int SQL(string qry, Hashtable ht)
+         {
+             int res = 0;
+             try
+             {
 
+                 SqlCommand cmd = new SqlCommand(qry, con);
+                 cmd.CommandType = CommandType.Text;
+
+                 foreach (DictionaryEntry item in ht)
+                 {
+                     cmd.Parameters.AddWithValue(item.Key.ToString(), item.Value);
+
+                 }
+                 if (con.State == ConnectionState.Closed) { con.Open(); }
+                 res = cmd.ExecuteNonQuery();
+                 if (con.State == ConnectionState.Open) { con.Close(); }
+             }
+             catch (Exception ex)
+             {
+                 MessageBox.Show(ex.ToString());
+                 con.Close();
+             }
+
+             return res;
+
+         }
+         public static string LoadData(string qry, DataGridView gv, ListBox lb)
+         {
+             try
+             {
+                 SqlCommand cmd = new SqlCommand(qry, con);
+                 cmd.CommandType = CommandType.Text;
+                 SqlDataAdapter da = new SqlDataAdapter(cmd);
+                 DataTable dt = new DataTable();
+                 da.Fill(dt);
+
+                 for (int i = 0; i < lb.Items.Count; i++)
+                 {
+                     string colNam1 = ((DataGridViewColumn)lb.Items[i]).Name;
+                     gv.Columns[colNam1].DataPropertyName = dt.Columns[1].ToString();
+                 }
+
+                 gv.DataSource = dt;
+             }
+             catch (Exception ex)
+             {
+                 MessageBox.Show(ex.ToString());
+                 con.Close();
+             }  
+       */
 
 
 
@@ -110,5 +165,59 @@ namespace DoAn
             get { return user; }
             private set { user = value; }
         }
+
+
+        public static int SQL(string qry, Hashtable ht)
+        {
+            using (var context = new MyDbContext())
+            {
+                var connection = (SqlConnection)context.Database.Connection;
+                connection.Open(); // Mở kết nối
+
+                // Tạo một đối tượng SqlCommand mới             
+                var cmd = new SqlCommand(qry, connection);
+                // Thêm các tham số vào đối tượng SqlCommand
+                foreach (DictionaryEntry item in ht)
+                {
+                    cmd.Parameters.AddWithValue(item.Key.ToString(), item.Value);
+                }
+
+                // Thực thi câu lệnh SQL
+                int result = cmd.ExecuteNonQuery();
+
+                //connection.Close(); // Đóng kết nối
+
+                return result;
+            }
+        }
+
+
+
+
+        public static string LoadData(string qry, DataGridView gv, ListBox lb)
+        {
+            using (var context = new MyDbContext())
+            {
+                // Tạo một đối tượng SqlDataAdapter mới
+                var da = new SqlDataAdapter(qry, (SqlConnection)context.Database.Connection);
+
+                // Điền dữ liệu vào một đối tượng DataTable
+                var dt = new DataTable();
+                da.Fill(dt);
+
+                // Liên kết dữ liệu từ đối tượng DataTable đến DataGridView
+                gv.DataSource = dt;
+
+                // Liên kết các cột của DataGridView với các thuộc tính của đối tượng Entity
+                for (int i = 0; i < lb.Items.Count; i++)
+                {
+                    var colNam1 = ((DataGridViewColumn)lb.Items[i]).Name;
+                    gv.Columns[colNam1].DataPropertyName = dt.Columns[0].ToString();
+                }
+
+                return gv.ToString();
+            }
+
+        }     
     }
 }

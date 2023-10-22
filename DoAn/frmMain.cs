@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading;
 using System.Windows.Forms;
 using DoAn.Database;
-
+using DoAn.View;
 
 namespace DoAn
 {
@@ -58,6 +58,11 @@ namespace DoAn
         private void btnHome_Click(object sender, EventArgs e)
         {
             AddControl(new Home());
+        }
+
+        private void btnCategory_Click(object sender, EventArgs e)
+        {
+            AddControl(new frmCategoryView());
         }
     }
 }

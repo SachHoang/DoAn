@@ -65,6 +65,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Database\category.cs" />
     <Compile Include="Database\Model1.cs" />
     <Compile Include="Database\user.cs" />
     <Compile Include="frmLogin.cs">

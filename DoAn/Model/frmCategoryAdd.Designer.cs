@@ -39,12 +39,12 @@
             // panel1
             // 
             this.panel1.Location = new System.Drawing.Point(0, 339);
-            this.panel1.Size = new System.Drawing.Size(395, 77);
+            this.panel1.Size = new System.Drawing.Size(354, 77);
             this.panel1.TabIndex = 2;
             // 
             // panel2
             // 
-            this.panel2.Size = new System.Drawing.Size(395, 127);
+            this.panel2.Size = new System.Drawing.Size(354, 127);
             this.panel2.TabIndex = 3;
             // 
             // pictureBox1
@@ -55,13 +55,19 @@
             // 
             // button1
             // 
+            this.button1.Location = new System.Drawing.Point(172, 15);
             this.button1.TabIndex = 1;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // label1
             // 
             this.label1.Size = new System.Drawing.Size(123, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Add Category";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(54, 15);
             // 
             // label2
             // 
@@ -84,7 +90,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(395, 416);
+            this.ClientSize = new System.Drawing.Size(354, 416);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.label2);
             this.Name = "frmCategoryAdd";
