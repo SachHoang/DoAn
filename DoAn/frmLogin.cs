@@ -28,23 +28,20 @@ namespace DoAn
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string username = "admin";
-            string password = "123";
-
-            // Lấy tên người dùng và mật khẩu được nhập
-            string inputUsername = txtUser.Text;
-            string inputPassword = txtPass.Text;
-
-            if (MainClass.UserHelper.IsValidUser(inputUsername, inputPassword))
+            string Username = "Admin";
+            string Password = "1";
+            if (Username.Equals(txtUser.Text) && Password.Equals(txtPass.Text))
             {
-                MessageBox.Show("Bạn nhập sai TK hoặc MK mời nhập lại ");
-                return;
-            }
-            else
-            {
+                /*Giaodien gd = new Giaodien();
+                gd.Show();
+                this.Hide();*/
                 Thread thread = new Thread(new ThreadStart(ShowGiaodien)); // Khởi tạo luồng mới
                 thread.Start(); //Khởi chạy luôngf
                 this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Bạn đã nhập sai Tài Khoản hoặc Mật Khẩu ! Xin hãy nhập lại", "Thông báo", MessageBoxButtons.OK);
             }
         }
 
