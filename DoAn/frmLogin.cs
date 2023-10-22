@@ -28,21 +28,6 @@ namespace DoAn
 
         private void button1_Click(object sender, EventArgs e)
         {
-            /*string Username = "Admin";
-            string Password = "1";
-            if (Username.Equals(txtUser.Text) && Password.Equals(txtPass.Text))
-            {
-                *//*Giaodien gd = new Giaodien();
-                gd.Show();
-                this.Hide();*//*
-                Thread thread = new Thread(new ThreadStart(ShowGiaodien)); // Khởi tạo luồng mới
-                thread.Start(); //Khởi chạy luôngf
-                this.Close();
-            }
-            else
-            {
-                MessageBox.Show("Bạn đã nhập sai Tài Khoản hoặc Mật Khẩu ! Xin hãy nhập lại", "Thông báo", MessageBoxButtons.OK);
-            }*/
             // Lấy tên người dùng và mật khẩu từ các trường văn bản
             string username = txtUser.Text;
             string password = txtPass.Text;
@@ -64,7 +49,15 @@ namespace DoAn
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult rs = MessageBox.Show("Bạn chắc chắn muốn thoát!", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (rs == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+            else
+            {
+                return;
+            }
         }
     }
 }

@@ -97,11 +97,18 @@ namespace DoAn
                 var userEntity = context.users.SingleOrDefault(u => u.username == user && u.upass == pass);
                 if (userEntity != null)
                 {
+                    USER = userEntity.uName;
                     return true;
                 }
             }
-
+            USER = null;
             return false;
+        }
+        public static string user;
+        public static string USER
+        {
+            get { return user; }
+            private set { user = value; }
         }
     }
 }
