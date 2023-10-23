@@ -23,58 +23,22 @@ namespace DoAn.Model
         public int id = 0;
 
         public override void button2_Click(object sender, EventArgs e)
-        {
-            /* string qry = "";
-             if (id == 0)
-             {
-                 qry = "Insert into category Values(@Name)";
-
-             }
-             else
-             {
-                 qry = "Update category Set catName =  @Name where catID = @id";
-             }
-
-             Hashtable ht = new Hashtable();
-             ht.Add("@id", id);
-             ht.Add("@Name", txtName.Text);
-
-             if (MainClass.SQL(qry, ht) > 0)
-             {
-                 MessageBox.Show("Lưu Thành Công...");
-                 id = 0;
-                 txtName.Focus();
-             }*/
+        {          
 
 
-            using (var context = new MyDbContext())
+            using (var context = new Model1())
             {
                 category newCategory = new category
                 {
                     catName = txtName.Text
                 };
 
-                context.Categories.Add(newCategory);
+                context.categories.Add(newCategory);
+                MessageBox.Show("Thêm Thành Công!");
                 context.SaveChanges();
             }
 
-            /*using (var context = new MyDbContext())
-            {
-                Category category = new Category();
-                category.CatName = txtName.Text;
-
-                if (id == 0)
-                {
-                    context.Categories.Add(category);
-                }
-                else
-                {
-                    context.Categories.Attach(category);
-                    context.Entry(category).State = EntityState.Modified;
-                }
-
-                context.SaveChanges();
-            }*/
+            
 
         }
 

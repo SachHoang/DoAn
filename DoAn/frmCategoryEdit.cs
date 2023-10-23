@@ -21,9 +21,9 @@ namespace DoAn
         public frmCategoryEdit(int catID)
         {
             InitializeComponent();
-            using (var context = new MyDbContext())
+            using (var context = new Model1())
             {
-                this.categoryToEdit = context.Categories.FirstOrDefault(c => c.catID == catID);
+                this.categoryToEdit = context.categories.FirstOrDefault(c => c.catID == catID);
             }
 
             // Hiển thị thông tin danh mục trong các thành phần giao diện
@@ -34,7 +34,7 @@ namespace DoAn
         {
             categoryToEdit.catName = txtCatName.Text;
 
-            using (var context = new MyDbContext()) // Thay thế "MyDbContext" bằng lớp dẫn xuất từ cơ sở dữ liệu của bạn
+            using (var context = new Model1()) // Thay thế "MyDbContext" bằng lớp dẫn xuất từ cơ sở dữ liệu của bạn
             {
                 context.Entry(categoryToEdit).State = EntityState.Modified;
                 context.SaveChanges();

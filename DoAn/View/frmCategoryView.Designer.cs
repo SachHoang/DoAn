@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCategoryView));
             this.dgvCategory = new System.Windows.Forms.DataGridView();
             this.dgvSno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnUpdate = new System.Windows.Forms.PictureBox();
             this.btnDelete = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.btnAdd)).BeginInit();
@@ -56,12 +58,13 @@
             // 
             // dgvCategory
             // 
-            this.dgvCategory.AllowUserToOrderColumns = true;
             this.dgvCategory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvCategory.BackgroundColor = System.Drawing.Color.White;
             this.dgvCategory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCategory.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dgvSno});
+            this.dgvSno,
+            this.Column1,
+            this.Column2});
             this.dgvCategory.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.dgvCategory.Location = new System.Drawing.Point(49, 193);
             this.dgvCategory.Name = "dgvCategory";
@@ -80,6 +83,18 @@
             this.dgvSno.MinimumWidth = 70;
             this.dgvSno.Name = "dgvSno";
             this.dgvSno.Width = 70;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Mã Danh Mục";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Tên Danh Mục";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
             // 
             // btnUpdate
             // 
@@ -132,8 +147,10 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvCategory;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvSno;
         private System.Windows.Forms.PictureBox btnUpdate;
         private System.Windows.Forms.PictureBox btnDelete;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvSno;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
     }
 }
