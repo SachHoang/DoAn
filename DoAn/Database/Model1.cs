@@ -8,17 +8,18 @@ namespace DoAn.Database
     public partial class Model1 : DbContext
     {
         public Model1()
-            : base("name=Model1")
+            : base("name=Model11")
         {
         }
 
         public virtual DbSet<category> categories { get; set; }
+        public virtual DbSet<product> products { get; set; }
         public virtual DbSet<user> users { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<category>()
-                .Property(e => e.catName)
+            modelBuilder.Entity<product>()
+                .Property(e => e.pName)
                 .IsUnicode(false);
 
             modelBuilder.Entity<user>()

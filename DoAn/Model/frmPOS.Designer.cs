@@ -315,7 +315,7 @@
             this.ucProduct1.PCategory = null;
             this.ucProduct1.PImage = ((System.Drawing.Image)(resources.GetObject("ucProduct1.PImage")));
             this.ucProduct1.PName = "Product Name";
-            this.ucProduct1.PPrice = 0;
+            this.ucProduct1.PPrice = "0";
             this.ucProduct1.Size = new System.Drawing.Size(214, 171);
             this.ucProduct1.TabIndex = 0;
             // 
@@ -327,7 +327,7 @@
             this.ucProduct2.PCategory = null;
             this.ucProduct2.PImage = ((System.Drawing.Image)(resources.GetObject("ucProduct2.PImage")));
             this.ucProduct2.PName = "Product Name";
-            this.ucProduct2.PPrice = 0;
+            this.ucProduct2.PPrice = "0";
             this.ucProduct2.Size = new System.Drawing.Size(214, 171);
             this.ucProduct2.TabIndex = 0;
             // 
@@ -339,7 +339,7 @@
             this.ucProduct3.PCategory = null;
             this.ucProduct3.PImage = ((System.Drawing.Image)(resources.GetObject("ucProduct3.PImage")));
             this.ucProduct3.PName = "Product Name";
-            this.ucProduct3.PPrice = 0;
+            this.ucProduct3.PPrice = "0";
             this.ucProduct3.Size = new System.Drawing.Size(214, 171);
             this.ucProduct3.TabIndex = 0;
             // 

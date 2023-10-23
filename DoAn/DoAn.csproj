@@ -67,6 +67,7 @@
   <ItemGroup>
     <Compile Include="Database\category.cs" />
     <Compile Include="Database\Model1.cs" />
+    <Compile Include="Database\product.cs" />
     <Compile Include="Database\user.cs" />
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>

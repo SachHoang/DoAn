@@ -19,11 +19,13 @@ namespace DoAn.Model
         }
 
         public int id { get; set; }
-        public int PPrice {  get; set; }
+        public String PPrice {  get; set; }
 
 
         public string PCategory { get; set; }
         public string PName
+
+        
         {
             get { return lblName.Text; }
             set { lblName.Text = value; }
