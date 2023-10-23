@@ -25,7 +25,7 @@ namespace DoAn.View
             lb.Items.Add(dgvId);
             lb.Items.Add(dgvName);
 
-            MainClass.LoadData(qry, dgvCategory, lb);
+            //MainClass.LoadData(qry, dgvCategory, lb);
         }
 
         private void frmCategoryView_Load(object sender, EventArgs e)

@@ -122,6 +122,7 @@
             this.btnPOS.Text = "POS";
             this.btnPOS.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnPOS.UseVisualStyleBackColor = false;
+            this.btnPOS.Click += new System.EventHandler(this.btnPOS_Click);
             // 
             // btnStaff
             // 
