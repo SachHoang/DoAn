@@ -15,6 +15,7 @@ using System.Windows.Forms;
 using System.Security.Cryptography.X509Certificates;
 using System.Xml.Linq;
 using DoAn.Model;
+using DoAn.View;
 namespace DoAn
 {
     internal class MainClass
@@ -143,6 +144,7 @@ namespace DoAn
             }
 
             public DbSet<User> Users { get; set; }
+            public DbSet<category> Categories { get; set; }
         }
 
         public static bool IsValidUser(string user, string pass)
@@ -167,7 +169,7 @@ namespace DoAn
         }
 
 
-        public static int SQL(string qry, Hashtable ht)
+        /*public static int SQL(string qry, Hashtable ht)
         {
             using (var context = new MyDbContext())
             {
@@ -218,6 +220,9 @@ namespace DoAn
                 return gv.ToString();
             }
 
-        }     
+        }     */
+
+
+       
     }
 }
