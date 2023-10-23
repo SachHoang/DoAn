@@ -13,14 +13,11 @@ namespace DoAn.Database
         }
 
         public virtual DbSet<category> categories { get; set; }
+        public virtual DbSet<table> tables { get; set; }
         public virtual DbSet<user> users { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<category>()
-                .Property(e => e.catName)
-                .IsUnicode(false);
-
             modelBuilder.Entity<user>()
                 .Property(e => e.username)
                 .IsUnicode(false);

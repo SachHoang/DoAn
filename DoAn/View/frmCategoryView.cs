@@ -96,21 +96,8 @@ namespace DoAn.View
 
         private void dgvCategory_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0)
-            {
-                if (e.ColumnIndex == dgvCategory.Columns["dgvEdit"].Index)
-                {
-                    // Xử lý chức năng sửa
-                    int catID = (int)dgvCategory.Rows[e.RowIndex].Cells["CatID"].Value;
-                    // Mở form sửa với catID
-                }
-                else if (e.ColumnIndex == dgvCategory.Columns["dgvDelete"].Index)
-                {
-                    // Xử lý chức năng xóa
-                    int catID = (int)dgvCategory.Rows[e.RowIndex].Cells["CatID"].Value;
-                    // Xóa danh mục với catID
-                }
-            }
+           
+            if (e.RowIndex == -1) return;
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)

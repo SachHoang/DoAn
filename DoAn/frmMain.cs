@@ -66,5 +66,11 @@ namespace DoAn
             AddControl(new frmCategoryView());
             label2.Text = btnCategory.Text;
         }
+
+        private void btnTable_Click(object sender, EventArgs e)
+        {
+            AddControl(new frmTableView());
+            label2.Text = btnTable.Text;
+        }
     }
 }

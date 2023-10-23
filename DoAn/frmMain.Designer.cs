@@ -148,6 +148,7 @@
             this.btnTable.Text = "Table";
             this.btnTable.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTable.UseVisualStyleBackColor = false;
+            this.btnTable.Click += new System.EventHandler(this.btnTable_Click);
             // 
             // btnProduct
             // 

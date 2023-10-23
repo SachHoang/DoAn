@@ -93,9 +93,9 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtCatName;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.Button btnClose;
+        public System.Windows.Forms.TextBox txtCatName;
+        public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Button btnSave;
+        public System.Windows.Forms.Button btnClose;
     }
 }

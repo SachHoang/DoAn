@@ -6,13 +6,12 @@ namespace DoAn.Database
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("category")]
-    public partial class category
+    public partial class table
     {
         [Key]
-        public int catID { get; set; }
+        public int tid { get; set; }
 
-        [StringLength(250)]
-        public string catName { get; set; }
+        [StringLength(15)]
+        public string tname { get; set; }
     }
 }
