@@ -123,27 +123,27 @@ namespace DoAn.View
                 if (dgvTable.SelectedRows.Count > 0)
                 {
                     // Lấy giá trị catID từ dòng đã chọn
-                    int catID = Convert.ToInt32(dgvTable.SelectedRows[0].Cells[1].Value);
+                    int tID = Convert.ToInt32(dgvTable.SelectedRows[0].Cells[1].Value);
 
                     // Xóa danh mục với catID
                     using (var context = new Model1())
                     {
-                        var category = context.categories.FirstOrDefault(c => c.catID == catID);
+                        var category = context.tables.FirstOrDefault(c => c.tid == tID);
                         if (category != null)
                         {
-                            context.categories.Remove(category);
+                            context.tables.Remove(category);
                             MessageBox.Show("Xoá Thành Công!");
                             context.SaveChanges();
                         }
                     }
 
                     // Sau khi xóa, nạp lại dữ liệu
-                    
+                    LoadData(s.tables.ToList());
                 }
-                LoadData(s.tables.ToList());
+                
             }
             else
-            {
+            {   
                 return;
             }
         }
