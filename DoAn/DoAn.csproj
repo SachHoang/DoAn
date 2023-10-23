@@ -72,6 +72,7 @@
     <Compile Include="Database\category.cs" />
     <Compile Include="Database\Model1.cs" />
     <Compile Include="Database\table.cs" />
+    <Compile Include="Database\Staff.cs" />
     <Compile Include="Database\user.cs" />
     <Compile Include="frmCategoryEdit.cs">
       <SubType>Form</SubType>
@@ -97,6 +98,12 @@
     <Compile Include="frmTableEdit.Designer.cs">
       <DependentUpon>frmTableEdit.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmStaffEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStaffEdit.Designer.cs">
+      <DependentUpon>frmStaffEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +122,12 @@
     </Compile>
     <Compile Include="Model\frmTableAdd.Designer.cs">
       <DependentUpon>frmTableAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\frmStaffAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\frmStaffAdd.Designer.cs">
+      <DependentUpon>frmStaffAdd.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -142,6 +155,12 @@
     <Compile Include="View\frmTableView.Designer.cs">
       <DependentUpon>frmTableView.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\frmStaffView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmStaffView.Designer.cs">
+      <DependentUpon>frmStaffView.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmCategoryEdit.resx">
       <DependentUpon>frmCategoryEdit.cs</DependentUpon>
     </EmbeddedResource>
@@ -154,6 +173,9 @@
     <EmbeddedResource Include="frmTableEdit.resx">
       <DependentUpon>frmTableEdit.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmStaffEdit.resx">
+      <DependentUpon>frmStaffEdit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
@@ -162,6 +184,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Model\frmTableAdd.resx">
       <DependentUpon>frmTableAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\frmStaffAdd.resx">
+      <DependentUpon>frmStaffAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -183,6 +208,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmTableView.resx">
       <DependentUpon>frmTableView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmStaffView.resx">
+      <DependentUpon>frmStaffView.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
