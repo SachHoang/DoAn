@@ -61,16 +61,7 @@ namespace DoAn.View
         }
         private bool foundResult = false;
         public override void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            /*Model1 s = new Model1();
-            List<category> cat = s.categories.ToList();
-            using (var context = new Model1())
-            {
-                var keyword = textBox1.Text;
-                var categories = context.categories.Where(c => c.catName.Contains(keyword)).ToList();
-                dgvCategory.DataSource = categories;
-            }
-            LoadData(s.categories.ToList());*/
+        {           
             string searchTerm = textBox1.Text.ToLower();
             foundResult = false; // Đặt lại biến bool khi bạn bắt đầu tìm kiếm
 
@@ -144,25 +135,33 @@ namespace DoAn.View
         {
             Model1 s = new Model1();
             List<category> cat = s.categories.ToList();
-            if (dgvCategory.SelectedRows.Count > 0)
+            DialogResult rs = MessageBox.Show("Bạn chắc chắn muốn xóa!","Thông Báo",MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
+            if (rs == DialogResult.Yes)
             {
-                // Lấy giá trị catID từ dòng đã chọn
-                int catID = Convert.ToInt32(dgvCategory.SelectedRows[0].Cells[1].Value);
-
-                // Xóa danh mục với catID
-                using (var context = new Model1())
+                if (dgvCategory.SelectedRows.Count > 0)
                 {
-                    var category = context.categories.FirstOrDefault(c => c.catID == catID);
-                    if (category != null)
-                    {
-                        context.categories.Remove(category);
-                        MessageBox.Show("Xoá Thành Công!");
-                        context.SaveChanges();
-                    }
-                }
+                    // Lấy giá trị catID từ dòng đã chọn
+                    int catID = Convert.ToInt32(dgvCategory.SelectedRows[0].Cells[1].Value);
 
-                // Sau khi xóa, nạp lại dữ liệu
-                LoadData(s.categories.ToList());
+                    // Xóa danh mục với catID
+                    using (var context = new Model1())
+                    {
+                        var category = context.categories.FirstOrDefault(c => c.catID == catID);
+                        if (category != null)
+                        {
+                            context.categories.Remove(category);
+                            MessageBox.Show("Xoá Thành Công!");
+                            context.SaveChanges();
+                        }
+                    }
+
+                    // Sau khi xóa, nạp lại dữ liệu
+                    LoadData(s.categories.ToList());
+                }
+            }
+            else
+            {
+                return;
             }
         }
     }
