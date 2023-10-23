@@ -32,7 +32,8 @@ namespace DoAn.View
 
                 dgvStaff.Rows[index].Cells[1].Value = sff.Name;
                 dgvStaff.Rows[index].Cells[2].Value = sff.Phone;
-                dgvStaff.Rows[index].Cells[3].Value = sff.Address;
+                dgvStaff.Rows[index].Cells[3].Value = sff.Role;
+                dgvStaff.Rows[index].Cells[4].Value = sff.Address;
             }
         }
 

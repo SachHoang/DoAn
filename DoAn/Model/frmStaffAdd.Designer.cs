@@ -39,6 +39,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -151,11 +153,35 @@
             this.label6.TabIndex = 5;
             this.label6.Text = "Address";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(28, 295);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(43, 23);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "Role";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Cashier",
+            "Waiter\t",
+            "Cleaning\t",
+            "Manager\t"});
+            this.comboBox1.Location = new System.Drawing.Point(102, 287);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 31);
+            this.comboBox1.TabIndex = 7;
+            // 
             // frmStaffAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(712, 416);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtAddress);
             this.Controls.Add(this.label5);
@@ -168,8 +194,6 @@
             this.Controls.Add(this.label2);
             this.Name = "frmStaffAdd";
             this.Text = "frmStaffAdd";
-            this.Controls.SetChildIndex(this.panel1, 0);
-            this.Controls.SetChildIndex(this.panel2, 0);
             this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.txtID, 0);
             this.Controls.SetChildIndex(this.label3, 0);
@@ -180,6 +204,10 @@
             this.Controls.SetChildIndex(this.label5, 0);
             this.Controls.SetChildIndex(this.txtAddress, 0);
             this.Controls.SetChildIndex(this.label6, 0);
+            this.Controls.SetChildIndex(this.panel1, 0);
+            this.Controls.SetChildIndex(this.panel2, 0);
+            this.Controls.SetChildIndex(this.label7, 0);
+            this.Controls.SetChildIndex(this.comboBox1, 0);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -201,5 +229,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

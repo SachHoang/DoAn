@@ -28,6 +28,7 @@ namespace DoAn.Model
                     sff.ID = txtID.Text;
                     sff.Name = txtName.Text;
                     sff.Phone = txtPhone.Text;
+                    sff.Role = comboBox1.Text;
                     sff.Address = txtAddress.Text;
                 };
 

@@ -23,7 +23,19 @@ namespace DoAn.Database
                 .IsUnicode(false);
 
             modelBuilder.Entity<Staff>()
+                .Property(e => e.ID)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Staff>()
+                .Property(e => e.Name)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Staff>()
                 .Property(e => e.Phone)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Staff>()
+                .Property(e => e.Address)
                 .IsUnicode(false);
 
             modelBuilder.Entity<user>()

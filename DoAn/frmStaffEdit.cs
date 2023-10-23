@@ -25,6 +25,7 @@ namespace DoAn
                 
                 txtName.Text = staffToEdit.Name;
                 txtPhone.Text = staffToEdit.Phone;
+                comboBox1.Text = staffToEdit.Role;
                 txtAdress.Text = staffToEdit.Address;
             }
 
@@ -36,6 +37,7 @@ namespace DoAn
 
             staffToEdit.Name = txtName.Text;
             staffToEdit.Phone = txtPhone.Text;
+            staffToEdit.Role = comboBox1.Text.ToString();
             staffToEdit.Address = txtAdress.Text;
 
             using (var context = new Model1()) // Thay thế "MyDbContext" bằng lớp dẫn xuất từ cơ sở dữ liệu của bạn

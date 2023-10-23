@@ -23,5 +23,9 @@ namespace DoAn.Database
         [Required]
         [StringLength(255)]
         public string Address { get; set; }
+
+        [Required]
+        [StringLength(200)]
+        public string Role { get; set; }
     }
 }

@@ -38,6 +38,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -52,7 +54,7 @@
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(93, 112);
+            this.txtName.Location = new System.Drawing.Point(102, 84);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(191, 22);
             this.txtName.TabIndex = 1;
@@ -60,7 +62,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(29, 118);
+            this.label2.Location = new System.Drawing.Point(38, 90);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 16);
             this.label2.TabIndex = 2;
@@ -68,7 +70,7 @@
             // 
             // txtPhone
             // 
-            this.txtPhone.Location = new System.Drawing.Point(93, 170);
+            this.txtPhone.Location = new System.Drawing.Point(102, 142);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(163, 22);
             this.txtPhone.TabIndex = 1;
@@ -76,7 +78,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(27, 176);
+            this.label3.Location = new System.Drawing.Point(36, 148);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(46, 16);
             this.label3.TabIndex = 2;
@@ -84,7 +86,7 @@
             // 
             // txtAdress
             // 
-            this.txtAdress.Location = new System.Drawing.Point(93, 229);
+            this.txtAdress.Location = new System.Drawing.Point(102, 201);
             this.txtAdress.Name = "txtAdress";
             this.txtAdress.Size = new System.Drawing.Size(295, 22);
             this.txtAdress.TabIndex = 1;
@@ -92,7 +94,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(27, 235);
+            this.label4.Location = new System.Drawing.Point(36, 207);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(58, 16);
             this.label4.TabIndex = 2;
@@ -124,11 +126,35 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(39, 257);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(36, 16);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Role";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Cashier",
+            "Waiter\t",
+            "Cleaning\t",
+            "Manager\t"});
+            this.comboBox1.Location = new System.Drawing.Point(102, 248);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(152, 24);
+            this.comboBox1.TabIndex = 5;
+            // 
             // frmStaffEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(424, 374);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.label4);
@@ -156,5 +182,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
