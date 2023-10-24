@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtImage = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblName = new System.Windows.Forms.Label();
+            this.txtImage = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtImage)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtImage)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -45,18 +45,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(215, 183);
             this.panel1.TabIndex = 0;
-            // 
-            // txtImage
-            // 
-            this.txtImage.BackColor = System.Drawing.Color.Transparent;
-            this.txtImage.Image = global::DoAn.Properties.Resources.hamber;
-            this.txtImage.Location = new System.Drawing.Point(3, 3);
-            this.txtImage.Name = "txtImage";
-            this.txtImage.Size = new System.Drawing.Size(209, 118);
-            this.txtImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.txtImage.TabIndex = 0;
-            this.txtImage.TabStop = false;
-            this.txtImage.Click += new System.EventHandler(this.txtImage_Click);
             // 
             // panel2
             // 
@@ -77,6 +65,18 @@
             this.lblName.Text = "Product Name";
             this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // txtImage
+            // 
+            this.txtImage.BackColor = System.Drawing.Color.Transparent;
+            this.txtImage.Image = global::DoAn.Properties.Resources.hamber;
+            this.txtImage.Location = new System.Drawing.Point(3, 3);
+            this.txtImage.Name = "txtImage";
+            this.txtImage.Size = new System.Drawing.Size(209, 118);
+            this.txtImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.txtImage.TabIndex = 0;
+            this.txtImage.TabStop = false;
+            this.txtImage.Click += new System.EventHandler(this.txtImage_Click);
+            // 
             // ucProduct
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -84,8 +84,8 @@
             this.Name = "ucProduct";
             this.Size = new System.Drawing.Size(218, 189);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.txtImage)).EndInit();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.txtImage)).EndInit();
             this.ResumeLayout(false);
 
         }

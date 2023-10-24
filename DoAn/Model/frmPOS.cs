@@ -32,33 +32,10 @@ namespace DoAn.Model
         {
             dataGridView1.BorderStyle = BorderStyle.FixedSingle;
             AddCategory();
-            
+            // Load product
             ProductPanel.Controls.Clear();
-            LoadProducts();
+           LoadProducts();
         }
-
-        /*private void AddCategory()
-        {
-            string qry = "Select * form Category";
-            SqlCommand cmd = new SqlCommand(qry, Mainclass.con);
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            dt.Fill.(dt);
-
-            CategoryPanel.Controls.Clear();
-
-            if (dt.Rows.Count > 0)
-            {
-                foreach (DataRow row  int dt.Rows);
-                Guna.UI2.WinForms.Guna2Button b = new Guna.UI2.WinForms.Guna2Button();
-                b.FillColor = Color.FromArgb(50, 55, 89);
-                b.Size = new Size(134, 45);
-                b.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-                b.Text = row["catName"].ToString();
-
-                CategoryPanel.Controls.Add(b);
-            }
-        }*/
 
         private void AddCategory()
         {
@@ -75,7 +52,19 @@ namespace DoAn.Model
                     button.Size = new Size(134, 45);
                  //   button.Location = new Point(x, y); // Thay x và y bằng vị trí cụ thể trên giao diện
                     CategoryPanel.Controls.Add(button);
+                    //event for click
+                    button.Click += new EventHandler(b_Click);
                 }
+            }
+        }
+
+        private void b_Click(object sender, EventArgs e)
+        {
+            Button button = new Button();  
+            foreach (var item in ProductPanel.Controls)
+            {
+                var pro = (ucProduct)item;
+                pro.Visible = pro.PName.ToLower().Contains(button.Text.Trim().ToLower());
             }
         }
 
@@ -97,15 +86,22 @@ namespace DoAn.Model
                 var wdg = (ucProduct)ss;
                 foreach (DataGridViewRow item in dataGridView1.Rows)
                 {
+                    //Kiem tra san pham da co roi cap nhat va up date
                     if (Convert.ToInt32(item.Cells["dgvid"].Value) == wdg.id)
                     {
-                        item.Cells["dgvQty"].Value = int.Parse(item.Cells["dgvQty"].ToString() + 1);
-                        item.Cells["dgvAmount"].Value = int.Parse(item.Cells["dgvQty"].ToString()) *
-                                                        double.Parse(item.Cells["dvgPrice"].ToString());
+                        item.Cells["dgvQty"].Value = int.Parse(item.Cells["dgvQty"].Value.ToString() + 1);
+                        item.Cells["dgvAmount"].Value = int.Parse(item.Cells["dgvQty"].Value.ToString()) *
+                                                        double.Parse(item.Cells["dvgPrice"].Value.ToString());
+
+                        return;
                     }
-                    dataGridView1.Rows.Add(new object[] { 0, wdg.id, wdg.PName, 1, wdg.PPrice, wdg.PPrice, wdg.PPrice });
+                  
                 }
-            };
+                //them 1 san pham moi
+                dataGridView1.Rows.Add(new object[] { 0, wdg.id, wdg.PName, 1, wdg.PPrice, wdg.PPrice, wdg.PPrice });
+                //Total
+                GetTotal();
+            }; 
         }
 
         private void LoadProducts()
@@ -138,5 +134,35 @@ namespace DoAn.Model
                 return Image.FromStream(ms);
             }
         }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+         
+        }
+
+        //Hien thi ben dataridview
+        private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            int count = 0;
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                count ++;
+                row.Cells[0].Value = count; 
+            }
+        }
+
+        private  void GetTotal()
+        {
+            double tot = 0;
+            lblTotal.Text = "";
+            foreach(DataGridViewRow item in dataGridView1.Rows)
+            {
+                tot += double.Parse(item.Cells["dgvAmount"].Value.ToString());
+            }
+
+            lblTotal.Text = tot.ToString("N2");
+        }
+
+
     }
 }
