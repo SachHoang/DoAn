@@ -74,7 +74,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(71, 226);
+            this.label2.Location = new System.Drawing.Point(71, 240);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 23);
             this.label2.TabIndex = 1;
@@ -83,7 +83,7 @@
             // txtName
             // 
             this.txtName.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(75, 263);
+            this.txtName.Location = new System.Drawing.Point(75, 277);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(209, 43);
             this.txtName.TabIndex = 0;
@@ -91,7 +91,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(39, 148);
+            this.label3.Location = new System.Drawing.Point(71, 142);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(27, 23);
             this.label3.TabIndex = 4;
@@ -100,19 +100,18 @@
             // txtID
             // 
             this.txtID.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtID.Location = new System.Drawing.Point(111, 148);
+            this.txtID.Location = new System.Drawing.Point(75, 181);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(192, 43);
+            this.txtID.Size = new System.Drawing.Size(209, 43);
             this.txtID.TabIndex = 0;
             // 
             // frmCategoryAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(354, 416);
+            this.ClientSize = new System.Drawing.Size(551, 416);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtID);
-            this.ClientSize = new System.Drawing.Size(551, 416);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.label2);
             this.Name = "frmCategoryAdd";

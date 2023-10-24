@@ -81,7 +81,7 @@ namespace DoAn.Model
 
             };
             ProductPanel.Controls.Add(w);
-            w.onSelect += (ss, ee) =>
+            /*w.onSelect += (ss, ee) =>
             {
                 var wdg = (ucProduct)ss;
                 foreach (DataGridViewRow item in dataGridView1.Rows)
@@ -101,7 +101,35 @@ namespace DoAn.Model
                 dataGridView1.Rows.Add(new object[] { 0, wdg.id, wdg.PName, 1, wdg.PPrice, wdg.PPrice, wdg.PPrice });
                 //Total
                 GetTotal();
-            }; 
+            }; */
+            w.onSelect += (ss, ee) =>
+            {
+                var wdg = (ucProduct)ss;
+                // Tìm sản phẩm có sẵn trong DataGridView
+                bool productExists = false;
+                foreach (DataGridViewRow item in dataGridView1.Rows)
+                {
+                    if (Convert.ToInt32(item.Cells["dgvid"].Value) == wdg.id)
+                    {
+                        productExists = true;
+                        // Tăng số lượng và cập nhật tổng tiền
+                        int currentQty = int.Parse(item.Cells["dgvQty"].Value.ToString());
+                        item.Cells["dgvQty"].Value = currentQty + 1;
+                        item.Cells["dgvAmount"].Value = (currentQty + 1) * double.Parse(item.Cells["dgvPrice"].Value.ToString());
+                        break;
+                    }
+                }
+
+                // Nếu sản phẩm chưa tồn tại, thêm nó vào DataGridView
+                if (!productExists)
+                {
+                    dataGridView1.Rows.Add(new object[] { 0, wdg.id, wdg.PName, 1, wdg.PPrice, wdg.PPrice, wdg.PPrice });
+                }
+
+                // Tính toán tổng tiền
+                GetTotal();
+            };
+
         }
 
         private void LoadProducts()
