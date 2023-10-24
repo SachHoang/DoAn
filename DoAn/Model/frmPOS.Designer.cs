@@ -31,7 +31,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.btnDin = new System.Windows.Forms.Button();
-            this.btnKot = new System.Windows.Forms.Button();
             this.btnBill = new System.Windows.Forms.Button();
             this.btnNew = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -68,7 +67,6 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.btnDin);
-            this.panel1.Controls.Add(this.btnKot);
             this.panel1.Controls.Add(this.btnBill);
             this.panel1.Controls.Add(this.btnNew);
             this.panel1.Controls.Add(this.label4);
@@ -99,7 +97,7 @@
             this.btnDin.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnDin.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnDin.Image = global::DoAn.Properties.Resources.Dan_in;
-            this.btnDin.Location = new System.Drawing.Point(876, 11);
+            this.btnDin.Location = new System.Drawing.Point(768, 11);
             this.btnDin.Name = "btnDin";
             this.btnDin.Size = new System.Drawing.Size(131, 81);
             this.btnDin.TabIndex = 2;
@@ -107,27 +105,13 @@
             this.btnDin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnDin.UseVisualStyleBackColor = false;
             // 
-            // btnKot
-            // 
-            this.btnKot.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(85)))), ((int)(((byte)(126)))));
-            this.btnKot.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnKot.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnKot.Image = global::DoAn.Properties.Resources.kk;
-            this.btnKot.Location = new System.Drawing.Point(674, 11);
-            this.btnKot.Name = "btnKot";
-            this.btnKot.Size = new System.Drawing.Size(146, 81);
-            this.btnKot.TabIndex = 2;
-            this.btnKot.Text = "KOT";
-            this.btnKot.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnKot.UseVisualStyleBackColor = false;
-            // 
             // btnBill
             // 
             this.btnBill.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(85)))), ((int)(((byte)(126)))));
             this.btnBill.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnBill.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnBill.Image = global::DoAn.Properties.Resources.BILL;
-            this.btnBill.Location = new System.Drawing.Point(497, 12);
+            this.btnBill.Location = new System.Drawing.Point(546, 12);
             this.btnBill.Name = "btnBill";
             this.btnBill.Size = new System.Drawing.Size(131, 81);
             this.btnBill.TabIndex = 2;
@@ -141,7 +125,7 @@
             this.btnNew.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnNew.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnNew.Image = global::DoAn.Properties.Resources._new;
-            this.btnNew.Location = new System.Drawing.Point(320, 11);
+            this.btnNew.Location = new System.Drawing.Point(337, 11);
             this.btnNew.Name = "btnNew";
             this.btnNew.Size = new System.Drawing.Size(131, 81);
             this.btnNew.TabIndex = 2;
@@ -165,7 +149,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(1092, 57);
+            this.label3.Location = new System.Drawing.Point(1001, 54);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(134, 45);
             this.label3.TabIndex = 1;
@@ -176,7 +160,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(1092, 12);
+            this.label2.Location = new System.Drawing.Point(1001, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(108, 45);
             this.label2.TabIndex = 1;
@@ -408,7 +392,6 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnDin;
-        private System.Windows.Forms.Button btnKot;
         private System.Windows.Forms.Button btnBill;
         private System.Windows.Forms.Button btnNew;
         private System.Windows.Forms.Label label4;
