@@ -68,11 +68,13 @@ namespace DoAn
             label2.Text = btnCategory.Text;
         }
 
+
         private void btnPOS_Click(object sender, EventArgs e)
         {
             frmPOS frm =new frmPOS();
             frm.Show();
         }
+
 
         private void btnStaff_Click(object sender, EventArgs e)
         {
@@ -80,10 +82,25 @@ namespace DoAn
             label2.Text = btnStaff.Text;
         }
 
+
+        private void btnProduct_Click(object sender, EventArgs e)
+        {
+            AddControl(new frmProductView());
+            label2.Text = btnProduct.Text;
+        }
+
+
         private void btnTable_Click(object sender, EventArgs e)
         {
             AddControl(new frmTableView());
             label2.Text = btnTable.Text;
+        }
+
+        private void btnPOS_Click(object sender, EventArgs e)
+        {
+            frmPOS frm =new frmPOS();
+            label2.Text = btnPOS.Text;
+            frm.Show();
         }
     }
 }

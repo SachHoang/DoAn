@@ -42,5 +42,11 @@ namespace DoAn.Model
         {
             this.Close();
         }
+
+        private void frmStaffAdd_Load(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

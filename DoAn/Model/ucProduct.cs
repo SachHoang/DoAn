@@ -25,7 +25,6 @@ namespace DoAn.Model
         public string PCategory { get; set; }
         public string PName
 
-        
         {
             get { return lblName.Text; }
             set { lblName.Text = value; }

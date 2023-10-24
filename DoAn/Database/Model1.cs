@@ -13,6 +13,9 @@ namespace DoAn.Database
         }
 
         public virtual DbSet<category> categories { get; set; }
+
+        public virtual DbSet<Product> Products { get; set; }
+
         public virtual DbSet<Staff> Staffs { get; set; }
         public virtual DbSet<table> tables { get; set; }
         public virtual DbSet<product> products { get; set; }
@@ -20,6 +23,7 @@ namespace DoAn.Database
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+
             modelBuilder.Entity<product>()
                 .Property(e => e.pName)
                 .IsUnicode(false);
@@ -39,6 +43,12 @@ namespace DoAn.Database
             modelBuilder.Entity<Staff>()
                 .Property(e => e.Address)
                 .IsUnicode(false);
+
+            modelBuilder.Entity<category>()
+                .HasMany(e => e.Products)
+                .WithRequired(e => e.category)
+                .WillCascadeOnDelete(false);
+
 
             modelBuilder.Entity<user>()
                 .Property(e => e.username)

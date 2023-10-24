@@ -194,6 +194,9 @@
             this.Controls.Add(this.label2);
             this.Name = "frmStaffAdd";
             this.Text = "frmStaffAdd";
+
+            this.Load += new System.EventHandler(this.frmStaffAdd_Load);
+
             this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.txtID, 0);
             this.Controls.SetChildIndex(this.label3, 0);

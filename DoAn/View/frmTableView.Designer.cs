@@ -49,10 +49,17 @@
             // 
             this.label1.Location = new System.Drawing.Point(677, 78);
             // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(39, 24);
+            this.label2.Size = new System.Drawing.Size(108, 31);
+            this.label2.Text = "Table List";
+            // 
             // dgvTable
             // 
             this.dgvTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvTable.BackgroundColor = System.Drawing.Color.White;
+            this.dgvTable.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dgvTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgvSno,
