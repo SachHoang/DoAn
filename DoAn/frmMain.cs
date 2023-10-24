@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading;
 using System.Windows.Forms;
 using DoAn.Database;
+using DoAn.Model;
 using DoAn.View;
 
 namespace DoAn
@@ -65,6 +66,12 @@ namespace DoAn
         {
             AddControl(new frmCategoryView());
             label2.Text = btnCategory.Text;
+        }
+
+        private void btnPOS_Click(object sender, EventArgs e)
+        {
+            frmPOS frm =new frmPOS();
+            frm.Show();
         }
 
         private void btnStaff_Click(object sender, EventArgs e)
