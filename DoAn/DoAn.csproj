@@ -74,10 +74,6 @@
     <Compile Include="Database\Product.cs" />
     <Compile Include="Database\Staff.cs" />
     <Compile Include="Database\table.cs" />
-    <Compile Include="Database\table.cs" />
-    <Compile Include="Database\Product.cs" />
-    <Compile Include="Database\Staff.cs" />
-    <Compile Include="Database\table.cs" />
     <Compile Include="Database\user.cs" />
     <Compile Include="frmCategoryEdit.cs">
       <SubType>Form</SubType>
