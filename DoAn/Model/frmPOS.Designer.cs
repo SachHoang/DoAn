@@ -97,7 +97,7 @@
             this.btnDin.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnDin.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnDin.Image = global::DoAn.Properties.Resources.Dan_in;
-            this.btnDin.Location = new System.Drawing.Point(768, 11);
+            this.btnDin.Location = new System.Drawing.Point(610, 12);
             this.btnDin.Name = "btnDin";
             this.btnDin.Size = new System.Drawing.Size(131, 81);
             this.btnDin.TabIndex = 2;
@@ -111,7 +111,7 @@
             this.btnBill.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnBill.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnBill.Image = global::DoAn.Properties.Resources.BILL;
-            this.btnBill.Location = new System.Drawing.Point(546, 12);
+            this.btnBill.Location = new System.Drawing.Point(862, 12);
             this.btnBill.Name = "btnBill";
             this.btnBill.Size = new System.Drawing.Size(131, 81);
             this.btnBill.TabIndex = 2;
@@ -125,7 +125,7 @@
             this.btnNew.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnNew.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnNew.Image = global::DoAn.Properties.Resources._new;
-            this.btnNew.Location = new System.Drawing.Point(337, 11);
+            this.btnNew.Location = new System.Drawing.Point(370, 12);
             this.btnNew.Name = "btnNew";
             this.btnNew.Size = new System.Drawing.Size(131, 81);
             this.btnNew.TabIndex = 2;
@@ -149,7 +149,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(1001, 54);
+            this.label3.Location = new System.Drawing.Point(1083, 57);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(134, 45);
             this.label3.TabIndex = 1;
@@ -160,7 +160,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(1001, 9);
+            this.label2.Location = new System.Drawing.Point(1083, 12);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(108, 45);
             this.label2.TabIndex = 1;
