@@ -16,7 +16,7 @@ namespace DoAn.Database
         public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<Staff> Staffs { get; set; }
         public virtual DbSet<table> tables { get; set; }
-        public virtual DbSet<table> tables { get; set; }
+     
         public virtual DbSet<user> users { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
