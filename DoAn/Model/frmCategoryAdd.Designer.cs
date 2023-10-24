@@ -41,12 +41,12 @@
             // panel1
             // 
             this.panel1.Location = new System.Drawing.Point(0, 339);
-            this.panel1.Size = new System.Drawing.Size(354, 77);
+            this.panel1.Size = new System.Drawing.Size(551, 77);
             this.panel1.TabIndex = 2;
             // 
             // panel2
             // 
-            this.panel2.Size = new System.Drawing.Size(354, 127);
+            this.panel2.Size = new System.Drawing.Size(551, 127);
             this.panel2.TabIndex = 3;
             // 
             // pictureBox1
@@ -85,7 +85,7 @@
             this.txtName.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.Location = new System.Drawing.Point(75, 263);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(192, 43);
+            this.txtName.Size = new System.Drawing.Size(209, 43);
             this.txtName.TabIndex = 0;
             // 
             // label3
@@ -112,6 +112,7 @@
             this.ClientSize = new System.Drawing.Size(354, 416);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtID);
+            this.ClientSize = new System.Drawing.Size(551, 416);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.label2);
             this.Name = "frmCategoryAdd";
