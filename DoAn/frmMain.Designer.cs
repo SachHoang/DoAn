@@ -162,6 +162,7 @@
             this.btnProduct.Text = "Product";
             this.btnProduct.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnProduct.UseVisualStyleBackColor = false;
+            this.btnProduct.Click += new System.EventHandler(this.btnProduct_Click);
             // 
             // btnCategory
             // 

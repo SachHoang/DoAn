@@ -72,5 +72,10 @@ namespace DoAn
             AddControl(new frmStaffView());
             label2.Text = btnStaff.Text;
         }
+
+        private void btnProduct_Click(object sender, EventArgs e)
+        {
+            AddControl(new frmProductView());
+        }
     }
 }

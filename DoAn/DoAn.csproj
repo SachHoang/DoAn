@@ -71,7 +71,9 @@
   <ItemGroup>
     <Compile Include="Database\category.cs" />
     <Compile Include="Database\Model1.cs" />
+    <Compile Include="Database\Product.cs" />
     <Compile Include="Database\Staff.cs" />
+    <Compile Include="Database\table.cs" />
     <Compile Include="Database\user.cs" />
     <Compile Include="frmCategoryEdit.cs">
       <SubType>Form</SubType>
@@ -136,6 +138,12 @@
     <Compile Include="View\frmCategoryView.Designer.cs">
       <DependentUpon>frmCategoryView.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\frmProductView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmProductView.Designer.cs">
+      <DependentUpon>frmProductView.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\frmStaffView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,6 +188,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmCategoryView.resx">
       <DependentUpon>frmCategoryView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmProductView.resx">
+      <DependentUpon>frmProductView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmStaffView.resx">
       <DependentUpon>frmStaffView.cs</DependentUpon>
