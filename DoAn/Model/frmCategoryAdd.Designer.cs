@@ -95,6 +95,7 @@
             this.Controls.Add(this.label2);
             this.Name = "frmCategoryAdd";
             this.Text = "frmCategoryAdd";
+            this.Load += new System.EventHandler(this.frmCategoryAdd_Load);
             this.Controls.SetChildIndex(this.panel1, 0);
             this.Controls.SetChildIndex(this.panel2, 0);
             this.Controls.SetChildIndex(this.label2, 0);

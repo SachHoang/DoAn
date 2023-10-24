@@ -47,5 +47,10 @@ namespace DoAn.Model
         {
             this.Close();
         }
+
+        private void frmCategoryAdd_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

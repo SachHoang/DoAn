@@ -1,6 +1,7 @@
 using System;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
+using System.Data.Entity.Core.Objects;
 using System.Linq;
 
 namespace DoAn.Database
@@ -39,6 +40,11 @@ namespace DoAn.Database
             modelBuilder.Entity<user>()
                 .Property(e => e.uPhone)
                 .IsUnicode(false);
+        }
+
+        internal void SaveChanges(SaveOptions saveOptions)
+        {
+            throw new NotImplementedException();
         }
     }
 }
