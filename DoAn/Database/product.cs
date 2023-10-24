@@ -6,19 +6,20 @@ namespace DoAn.Database
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    public partial class product
+    [Table("Product")]
+    public partial class Product
     {
-        [Key]
-        public int pID { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int ProductID { get; set; }
 
-        [StringLength(50)]
+        [Required]
+        [StringLength(255)]
         public string pName { get; set; }
 
-        public double? pPrice { get; set; }
+        public int Price { get; set; }
 
-        public int? CategoryID { get; set; }
+        public int catID { get; set; }
 
-        [Column(TypeName = "image")]
-        public byte[] pImage { get; set; }
+        public virtual category category { get; set; }
     }
 }

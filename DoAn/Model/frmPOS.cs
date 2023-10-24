@@ -68,14 +68,14 @@ namespace DoAn.Model
             }
         }
 
-        private void AddItems(int id, string name, string cat, string price, Image pimage)
+        private void AddItems(int id, string name, string cat, string price /*, Image pimage*/)
         {
             var w = new ucProduct()
             {
                 PName = name,
                 PPrice = price,
                 PCategory = cat,
-                PImage = pimage,
+               /* PImage = pimage,*/
                 id = Convert.ToInt32(id)
 
 
@@ -89,7 +89,7 @@ namespace DoAn.Model
                     //Kiem tra san pham da co roi cap nhat va up date
                     if (Convert.ToInt32(item.Cells["dgvid"].Value) == wdg.id)
                     {
-                        item.Cells["dgvQty"].Value = int.Parse(item.Cells["dgvQty"].Value.ToString() + 1);
+                        item.Cells["dgvQty"].Value = int.Parse(item.Cells["dgvQty"].Value.ToString() +1);
                         item.Cells["dgvAmount"].Value = int.Parse(item.Cells["dgvQty"].Value.ToString()) *
                                                         double.Parse(item.Cells["dvgPrice"].Value.ToString());
 
@@ -108,21 +108,21 @@ namespace DoAn.Model
         {
             using (var context = new Model1()) // Thay "MyDbContext" bằng tên lớp kế thừa từ DbContext của bạn
             {
-                var query = from product in context.products
-                            join category in context.categories on product.CategoryID equals category.catID
+                var query = from product in context.Products
+                            join category in context.categories on product.catID equals category.catID
                             select new
                             {
-                                ProductID = product.pID,
+                                ProductID = product.ProductID,
                                 ProductName = product.pName,
                                 CategoryName = category.catID,
-                                ProductPrice = product.pPrice,
-                                ProductImage = product.pImage
+                                ProductPrice = product.Price,
+                              /*  ProductImage = product.pImage*/
                             };
 
                 foreach (var item in query)
                 {
                     // Chèn item vào danh sách hoặc hiển thị nó trực tiếp trên giao diện
-                    AddItems(item.ProductID, item.ProductName, item.CategoryName.ToString(), item.ProductPrice.ToString(), ByteArrayToImage(item.ProductImage));
+                    AddItems(item.ProductID, item.ProductName, item.CategoryName.ToString(), item.ProductPrice.ToString() /*, ByteArrayToImage(item.ProductImage)*/);
                 }
             }
         }
