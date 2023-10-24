@@ -43,13 +43,19 @@
             // 
             // btnAdd
             // 
+
             this.btnAdd.Location = new System.Drawing.Point(49, 71);
+
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click_1);
             // 
             // textBox1
             // 
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
             // 
+
+            // dgvStaff
+            // 
+
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -60,6 +66,7 @@
             // dgvStaff
             // 
             this.dgvStaff.BackgroundColor = System.Drawing.Color.Gainsboro;
+
             this.dgvStaff.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvStaff.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -104,11 +111,13 @@
             // 
             // Column1
             // 
+
             this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.Column1.HeaderText = "ID";
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
             this.Column1.Width = 110;
+
             // 
             // Column2
             // 

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucProduct));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -36,6 +37,7 @@
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtImage)).BeginInit();
+
             this.SuspendLayout();
             // 
             // panel1
@@ -44,16 +46,36 @@
             this.panel1.Controls.Add(this.txtImage);
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
+
+            this.panel1.Size = new System.Drawing.Size(215, 183);
+            this.panel1.TabIndex = 0;
+            // 
+            // txtImage
+            // 
+            this.txtImage.BackColor = System.Drawing.Color.Transparent;
+            this.txtImage.Image = global::DoAn.Properties.Resources.hamber;
+            this.txtImage.Location = new System.Drawing.Point(3, 3);
+            this.txtImage.Name = "txtImage";
+            this.txtImage.Size = new System.Drawing.Size(209, 118);
+            this.txtImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.txtImage.TabIndex = 0;
+            this.txtImage.TabStop = false;
+            this.txtImage.Click += new System.EventHandler(this.txtImage_Click);
+            // 
+
             this.panel1.Size = new System.Drawing.Size(201, 183);
             this.panel1.TabIndex = 0;
             // 
+
             // panel2
             // 
             this.panel2.Controls.Add(this.lblName);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 127);
             this.panel2.Name = "panel2";
+
             this.panel2.Size = new System.Drawing.Size(201, 56);
+
             this.panel2.TabIndex = 1;
             // 
             // lblName
@@ -61,11 +83,14 @@
             this.lblName.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblName.Location = new System.Drawing.Point(0, 0);
             this.lblName.Name = "lblName";
+
             this.lblName.Size = new System.Drawing.Size(198, 56);
+
             this.lblName.TabIndex = 0;
             this.lblName.Text = "Product Name";
             this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+
             // txtImage
             // 
             this.txtImage.BackColor = System.Drawing.Color.Transparent;
@@ -78,11 +103,13 @@
             this.txtImage.TabStop = false;
             this.txtImage.Click += new System.EventHandler(this.txtImage_Click);
             // 
+
             // ucProduct
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.Controls.Add(this.panel1);
             this.Name = "ucProduct";
+
             this.Size = new System.Drawing.Size(208, 189);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

@@ -26,6 +26,8 @@ namespace DoAn.View
         private void LoadData(List<category> sv1)
         {           
 
+            //MainClass.LoadData(qry, dgvCategory, lb);
+        }
             dgvCategory.Rows.Clear();
             foreach (var sv in sv1)
             {
