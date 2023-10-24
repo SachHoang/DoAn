@@ -16,6 +16,7 @@ namespace DoAn.Database
         }
 
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int catID { get; set; }
 
         [StringLength(250)]

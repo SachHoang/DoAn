@@ -21,6 +21,11 @@ namespace DoAn.Database
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<category>()
+                .HasMany(e => e.Products)
+                .WithRequired(e => e.category)
+                .WillCascadeOnDelete(false);
+
             modelBuilder.Entity<user>()
                 .Property(e => e.username)
                 .IsUnicode(false);
