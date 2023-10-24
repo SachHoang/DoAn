@@ -18,10 +18,7 @@ namespace DoAn.Database
 
         public int Price { get; set; }
 
-        public int? catID { get; set; }
-
-        [Column(TypeName = "image")]
-        public byte[] Image { get; set; }
+        public int catID { get; set; }
 
         public virtual category category { get; set; }
     }

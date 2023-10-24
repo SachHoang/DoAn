@@ -18,8 +18,7 @@ namespace DoAn.Model
         {
             InitializeComponent();
         }
-        public int ProductID = 0;
-
+      
         private void frmProductAdd_Load(object sender, EventArgs e)
         {
             Model1 context = new Model1();
@@ -39,20 +38,21 @@ namespace DoAn.Model
         {
             using (var context = new Model1())
             {
-                Product pro = new Product();
+                Product pro = new Product
                 {
-                    
 
 
-                    pro.pName = txtName.Text;
-                    pro.Price = int.Parse(txtPrice.Text);
-                    pro.catID = Convert.ToInt32(cmbCategory.SelectedIndex);
-                   
+                    ProductID = int.Parse(txtID.Text),
+                    pName = txtName.Text,
+                    Price = int.Parse(txtPrice.Text),
+                    catID = Convert.ToInt32(cmbCategory.SelectedValue),
+
                 };
 
                 context.Products.Add(pro);
-                MessageBox.Show("Thêm Thành Công!");
+              
                 context.SaveChanges();
+                MessageBox.Show("Thêm Thành Công!");
             }
         }
 

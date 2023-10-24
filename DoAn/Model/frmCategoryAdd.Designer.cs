@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCategoryAdd));
             this.label2 = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtID = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -72,7 +74,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(71, 188);
+            this.label2.Location = new System.Drawing.Point(71, 226);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 23);
             this.label2.TabIndex = 1;
@@ -81,25 +83,46 @@
             // txtName
             // 
             this.txtName.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(75, 223);
+            this.txtName.Location = new System.Drawing.Point(75, 263);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(192, 43);
             this.txtName.TabIndex = 0;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(39, 148);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(27, 23);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "ID";
+            // 
+            // txtID
+            // 
+            this.txtID.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtID.Location = new System.Drawing.Point(111, 148);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(192, 43);
+            this.txtID.TabIndex = 0;
             // 
             // frmCategoryAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(354, 416);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtID);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.label2);
             this.Name = "frmCategoryAdd";
             this.Text = "frmCategoryAdd";
             this.Load += new System.EventHandler(this.frmCategoryAdd_Load);
-            this.Controls.SetChildIndex(this.panel1, 0);
-            this.Controls.SetChildIndex(this.panel2, 0);
             this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.txtName, 0);
+            this.Controls.SetChildIndex(this.txtID, 0);
+            this.Controls.SetChildIndex(this.panel1, 0);
+            this.Controls.SetChildIndex(this.panel2, 0);
+            this.Controls.SetChildIndex(this.label3, 0);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -113,5 +136,7 @@
 
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtID;
     }
 }

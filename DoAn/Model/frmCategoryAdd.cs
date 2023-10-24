@@ -20,7 +20,7 @@ namespace DoAn.Model
         {
             InitializeComponent();
         }
-        public int id = 0;
+        
 
         public override void button2_Click(object sender, EventArgs e)
         {          
@@ -30,9 +30,10 @@ namespace DoAn.Model
             {
                 category newCategory = new category
                 {
+                    catID = int.Parse(txtID.Text),
                     catName = txtName.Text
                 };
-
+                
                 context.categories.Add(newCategory);
                 MessageBox.Show("Thêm Thành Công!");
                 context.SaveChanges();

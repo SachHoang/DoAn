@@ -37,6 +37,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtImage = new System.Windows.Forms.PictureBox();
             this.btnBrowser = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtID = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -74,7 +76,7 @@
             // cmbCategory
             // 
             this.cmbCategory.FormattingEnabled = true;
-            this.cmbCategory.Location = new System.Drawing.Point(139, 281);
+            this.cmbCategory.Location = new System.Drawing.Point(129, 302);
             this.cmbCategory.Name = "cmbCategory";
             this.cmbCategory.Size = new System.Drawing.Size(121, 31);
             this.cmbCategory.TabIndex = 13;
@@ -82,7 +84,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(37, 289);
+            this.label7.Location = new System.Drawing.Point(27, 310);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(79, 23);
             this.label7.TabIndex = 12;
@@ -90,7 +92,7 @@
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(129, 163);
+            this.txtName.Location = new System.Drawing.Point(129, 190);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(176, 30);
             this.txtName.TabIndex = 10;
@@ -98,7 +100,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(49, 170);
+            this.label3.Location = new System.Drawing.Point(50, 197);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(56, 23);
             this.label3.TabIndex = 8;
@@ -106,7 +108,7 @@
             // 
             // txtPrice
             // 
-            this.txtPrice.Location = new System.Drawing.Point(129, 221);
+            this.txtPrice.Location = new System.Drawing.Point(129, 246);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(131, 30);
             this.txtPrice.TabIndex = 11;
@@ -114,7 +116,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(49, 228);
+            this.label2.Location = new System.Drawing.Point(49, 253);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 23);
             this.label2.TabIndex = 9;
@@ -141,15 +143,33 @@
             this.btnBrowser.UseVisualStyleBackColor = true;
             this.btnBrowser.Click += new System.EventHandler(this.btnBrowser_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(49, 139);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(27, 23);
+            this.label4.TabIndex = 16;
+            this.label4.Text = "ID";
+            // 
+            // txtID
+            // 
+            this.txtID.Location = new System.Drawing.Point(129, 139);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(176, 30);
+            this.txtID.TabIndex = 10;
+            // 
             // frmProductAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.btnBrowser);
             this.Controls.Add(this.txtImage);
             this.Controls.Add(this.cmbCategory);
             this.Controls.Add(this.label7);
+            this.Controls.Add(this.txtID);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtPrice);
@@ -163,10 +183,12 @@
             this.Controls.SetChildIndex(this.txtPrice, 0);
             this.Controls.SetChildIndex(this.label3, 0);
             this.Controls.SetChildIndex(this.txtName, 0);
+            this.Controls.SetChildIndex(this.txtID, 0);
             this.Controls.SetChildIndex(this.label7, 0);
             this.Controls.SetChildIndex(this.cmbCategory, 0);
             this.Controls.SetChildIndex(this.txtImage, 0);
             this.Controls.SetChildIndex(this.btnBrowser, 0);
+            this.Controls.SetChildIndex(this.label4, 0);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -187,5 +209,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox txtImage;
         private System.Windows.Forms.Button btnBrowser;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtID;
     }
 }

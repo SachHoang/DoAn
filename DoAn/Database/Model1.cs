@@ -1,7 +1,6 @@
 using System;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
-using System.Data.Entity.Core.Objects;
 using System.Linq;
 
 namespace DoAn.Database
@@ -22,8 +21,9 @@ namespace DoAn.Database
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<category>()
-                .Property(e => e.catName)
-                .IsUnicode(false);
+                .HasMany(e => e.Products)
+                .WithRequired(e => e.category)
+                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<user>()
                 .Property(e => e.username)
@@ -40,11 +40,6 @@ namespace DoAn.Database
             modelBuilder.Entity<user>()
                 .Property(e => e.uPhone)
                 .IsUnicode(false);
-        }
-
-        internal void SaveChanges(SaveOptions saveOptions)
-        {
-            throw new NotImplementedException();
         }
     }
 }
