@@ -11,7 +11,7 @@ namespace DoAn.Database
         [Key]
         public int tid { get; set; }
 
-        [StringLength(15)]
+        [StringLength(50)]
         public string tname { get; set; }
     }
 }
