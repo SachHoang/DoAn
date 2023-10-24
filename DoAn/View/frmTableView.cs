@@ -40,6 +40,7 @@ namespace DoAn.View
 
         private void frmTableView_Load(object sender, EventArgs e)
         {
+            
             Model1 context = new Model1();
             List<table> cat = context.tables.ToList();
             LoadData(cat);
