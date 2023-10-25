@@ -13,6 +13,7 @@ using static DoAn.MainClass;
 using DoAn.Database;
 using System.Data.SqlClient;
 using System.IO;
+using System.Xml.Linq;
 
 namespace DoAn.Model
 {
@@ -234,6 +235,28 @@ namespace DoAn.Model
             }
 
   
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+
+            using (var context = new Model1())
+            {
+                tblMain main = new tblMain
+                {
+
+                   
+
+
+                    total =  double.Parse(lblTotal.Text)   
+
+                };
+
+                context.tblMains.Add(main);
+
+                context.SaveChanges();
+                MessageBox.Show("Thêm Thành Công!");
+            }
         }
     }
 }

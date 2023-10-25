@@ -28,13 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPOS));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.btnDin = new System.Windows.Forms.Button();
             this.btnBill = new System.Windows.Forms.Button();
             this.btnNew = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
             this.lblTable = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -50,15 +51,16 @@
             this.dgvPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtSearch = new System.Windows.Forms.TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.CategoryPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -68,8 +70,8 @@
             this.panel1.Controls.Add(this.btnDin);
             this.panel1.Controls.Add(this.btnBill);
             this.panel1.Controls.Add(this.btnNew);
-            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.lblTable);
+            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.btnExit);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -94,8 +96,7 @@
             this.btnDin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(85)))), ((int)(((byte)(126)))));
             this.btnDin.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnDin.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnDin.Image = global::DoAn.Properties.Resources.Dan_in;
-            this.btnDin.Location = new System.Drawing.Point(590, 11);
+            this.btnDin.Location = new System.Drawing.Point(688, 18);
             this.btnDin.Name = "btnDin";
             this.btnDin.Size = new System.Drawing.Size(131, 81);
             this.btnDin.TabIndex = 2;
@@ -109,8 +110,7 @@
             this.btnBill.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(85)))), ((int)(((byte)(126)))));
             this.btnBill.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnBill.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnBill.Image = global::DoAn.Properties.Resources.BILL;
-            this.btnBill.Location = new System.Drawing.Point(803, 12);
+            this.btnBill.Location = new System.Drawing.Point(497, 12);
             this.btnBill.Name = "btnBill";
             this.btnBill.Size = new System.Drawing.Size(131, 81);
             this.btnBill.TabIndex = 2;
@@ -123,8 +123,7 @@
             this.btnNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(85)))), ((int)(((byte)(126)))));
             this.btnNew.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnNew.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnNew.Image = global::DoAn.Properties.Resources._new;
-            this.btnNew.Location = new System.Drawing.Point(370, 11);
+            this.btnNew.Location = new System.Drawing.Point(320, 11);
             this.btnNew.Name = "btnNew";
             this.btnNew.Size = new System.Drawing.Size(131, 81);
             this.btnNew.TabIndex = 2;
@@ -132,17 +131,6 @@
             this.btnNew.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnNew.UseVisualStyleBackColor = false;
             this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(2398, 48);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(81, 45);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "POS";
             // 
             // lblTable
             // 
@@ -154,6 +142,14 @@
             this.lblTable.Size = new System.Drawing.Size(108, 45);
             this.lblTable.TabIndex = 1;
             this.lblTable.Text = "TABLE";
+            // 
+            // label2
+            // 
+            this.label2.Location = new System.Drawing.Point(0, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(100, 23);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "TABLE";
             // 
             // btnExit
             // 
@@ -182,8 +178,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(1080, 27);
+            this.label5.Location = new System.Drawing.Point(1106, 31);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(91, 45);
             this.label5.TabIndex = 1;
@@ -194,8 +189,7 @@
             this.lblTotal.AutoSize = true;
             this.lblTotal.BackColor = System.Drawing.Color.Transparent;
             this.lblTotal.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblTotal.ForeColor = System.Drawing.Color.White;
-            this.lblTotal.Location = new System.Drawing.Point(1193, 27);
+            this.lblTotal.Location = new System.Drawing.Point(1241, 15);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(81, 45);
             this.lblTotal.TabIndex = 1;
@@ -322,6 +316,31 @@
             this.txtSearch.TabIndex = 4;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
+            this.panel2.Controls.Add(this.btnSave);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.lblTotal);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 567);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1473, 100);
+            this.panel2.TabIndex = 6;
+            // 
+            // btnSave
+            // 
+            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
+            this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSave.Location = new System.Drawing.Point(899, 31);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(108, 45);
+            this.btnSave.TabIndex = 2;
+            this.btnSave.Text = "Save Bill";
+            this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::DoAn.Properties.Resources.search;
@@ -330,18 +349,6 @@
             this.pictureBox2.Size = new System.Drawing.Size(34, 30);
             this.pictureBox2.TabIndex = 5;
             this.pictureBox2.TabStop = false;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
-            this.panel2.Controls.Add(this.lblTotal);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.ForeColor = System.Drawing.SystemColors.Control;
-            this.panel2.Location = new System.Drawing.Point(0, 567);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1473, 100);
-            this.panel2.TabIndex = 6;
             // 
             // frmPOS
             // 
@@ -368,9 +375,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.CategoryPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -383,8 +390,8 @@
         private System.Windows.Forms.Button btnDin;
         private System.Windows.Forms.Button btnBill;
         private System.Windows.Forms.Button btnNew;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lblTable;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox btnExit;
         private System.Windows.Forms.FlowLayoutPanel CategoryPanel;
         private System.Windows.Forms.FlowLayoutPanel ProductPanel;
@@ -400,7 +407,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvName;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvQty;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvPrice;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvAmount;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvAmount;
     }
 }
