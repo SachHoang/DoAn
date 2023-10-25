@@ -54,6 +54,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnSave = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.txtTable = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -66,6 +67,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
+            this.panel1.Controls.Add(this.txtTable);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.btnDin);
             this.panel1.Controls.Add(this.btnBill);
@@ -117,6 +119,7 @@
             this.btnBill.Text = "Bill List";
             this.btnBill.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnBill.UseVisualStyleBackColor = false;
+            this.btnBill.Click += new System.EventHandler(this.btnBill_Click);
             // 
             // btnNew
             // 
@@ -137,7 +140,7 @@
             this.lblTable.AutoSize = true;
             this.lblTable.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblTable.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblTable.Location = new System.Drawing.Point(996, 25);
+            this.lblTable.Location = new System.Drawing.Point(899, 29);
             this.lblTable.Name = "lblTable";
             this.lblTable.Size = new System.Drawing.Size(108, 45);
             this.lblTable.TabIndex = 1;
@@ -350,6 +353,13 @@
             this.pictureBox2.TabIndex = 5;
             this.pictureBox2.TabStop = false;
             // 
+            // txtTable
+            // 
+            this.txtTable.Location = new System.Drawing.Point(1026, 37);
+            this.txtTable.Name = "txtTable";
+            this.txtTable.Size = new System.Drawing.Size(100, 30);
+            this.txtTable.TabIndex = 4;
+            // 
             // frmPOS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
@@ -410,5 +420,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvAmount;
+        private System.Windows.Forms.TextBox txtTable;
     }
 }

@@ -200,9 +200,9 @@ namespace DoAn.Model
 
         private void btnNew_Click(object sender, EventArgs e)
         {
-            lblTable.Text = "";
+            txtTable.Text = "";
            // lblWaiter.Text = "";
-            lblTable.Visible = false;
+            txtTable.Visible = false;
           //  lblWaiter.Visible = false;
             dataGridView1.Rows.Clear();
             MainID = 0;
@@ -224,16 +224,16 @@ namespace DoAn.Model
             AddControl(frm);
             if (frm.TableName != "") 
             {
-                lblTable.Text = frm.TableName;
-                lblTable.Visible = true;
+                txtTable.Text = frm.TableName;
+                txtTable.Visible = true;
             }
 
             else
             {   
-                lblTable.Text = "";
-                lblTable.Visible = false;
+                txtTable.Text = "";
+                txtTable.Visible = false;
             }
-
+            
   
         }
 
@@ -246,7 +246,7 @@ namespace DoAn.Model
                 {
 
                    
-
+                    TableName =txtTable.ToString(),
 
                     total =  double.Parse(lblTotal.Text)   
 
@@ -257,6 +257,11 @@ namespace DoAn.Model
                 context.SaveChanges();
                 MessageBox.Show("Thêm Thành Công!");
             }
+        }
+
+        private void btnBill_Click(object sender, EventArgs e)
+        {
+            AddControl(new frmBillList());
         }
     }
 }
