@@ -22,7 +22,7 @@ namespace DoAn.Model
         {
             InitializeComponent();
         }
-
+        public int MainID = 0;
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -165,8 +165,13 @@ namespace DoAn.Model
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-         
+            foreach (var item in ProductPanel.Controls)
+            {
+                var pro = (ucProduct)item;
+                pro.Visible = pro.PName.ToLower().Contains(txtSearch.Text.Trim().ToLower());
+            }
         }
+
 
         //Hien thi ben dataridview
         private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -191,14 +196,44 @@ namespace DoAn.Model
             lblTotal.Text = tot.ToString("N2");
         }
 
+
+        private void btnNew_Click(object sender, EventArgs e)
+        {
+            lblTable.Text = "";
+           // lblWaiter.Text = "";
+            lblTable.Visible = false;
+          //  lblWaiter.Visible = false;
+            dataGridView1.Rows.Clear();
+            MainID = 0;
+            lblTotal.Text = "00";
+        }
+
         public void AddControl(Form f)
         {
-          
+
             f.Show();
         }
-        private void btnBill_Click(object sender, EventArgs e)
+      
+        private void btnDin_Click(object sender, EventArgs e)
         {
-            AddControl(new frmBillList());
+            //Can tao form de chon ban va nguoi phuc vu
+            
+
+            frmTableSelect frm = new frmTableSelect();
+            AddControl(frm);
+            if (frm.TableName != "") 
+            {
+                lblTable.Text = frm.TableName;
+                lblTable.Visible = true;
+            }
+
+            else
+            {   
+                lblTable.Text = "";
+                lblTable.Visible = false;
+            }
+
+  
         }
     }
 }
