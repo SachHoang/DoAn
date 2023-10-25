@@ -134,6 +134,7 @@
             this.btnBill.Text = "Bill List";
             this.btnBill.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnBill.UseVisualStyleBackColor = false;
+            this.btnBill.Click += new System.EventHandler(this.btnBill_Click);
             // 
             // btnNew
             // 

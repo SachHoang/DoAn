@@ -191,6 +191,14 @@ namespace DoAn.Model
             lblTotal.Text = tot.ToString("N2");
         }
 
-
+        public void AddControl(Form f)
+        {
+          
+            f.Show();
+        }
+        private void btnBill_Click(object sender, EventArgs e)
+        {
+            AddControl(new frmBillList());
+        }
     }
 }
