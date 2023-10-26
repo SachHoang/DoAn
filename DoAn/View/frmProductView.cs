@@ -67,7 +67,7 @@ namespace DoAn.View
                 editForm.ShowDialog();
 
                 // Sau khi chỉnh sửa, nạp lại dữ liệu
-                
+                LoadData(context.Products.ToList());
             }
             LoadData(context.Products.ToList());
 

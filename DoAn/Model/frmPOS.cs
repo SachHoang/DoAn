@@ -196,9 +196,9 @@ namespace DoAn.Model
         }
       
         private void btnDin_Click(object sender, EventArgs e)
-        {
-            //Can tao form de chon ban 
+        {         
 
+            // Tạo form để chọn bàn
             frmTableSelect frm = new frmTableSelect();
 
             if (frm.ShowDialog() == DialogResult.OK) // Đảm bảo rằng bạn đã chọn bàn và nhấn OK trên frmTableSelect
@@ -209,33 +209,35 @@ namespace DoAn.Model
                 {
                     txtTBL.Text = selectedTable; // Gán tên bàn vào TextBox txtTBL
                 }
+                else
+                {
+                    MessageBox.Show("Vui lòng chọn một bàn trước khi lưu hóa đơn.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
-
-
         }
 
         private void btnSave_Click(object sender, EventArgs e)
-        {
+        {           
+
+            if (string.IsNullOrEmpty(txtTBL.Text))
+            {
+                MessageBox.Show("Vui lòng chọn một bàn trước khi lưu hóa đơn.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
             using (var context = new Model1())
             {
-                
                 tblMain main = new tblMain
                 {
-
-                   
-                    TableName =txtTBL.Text,
-
-                    total =  double.Parse(lblTotal.Text)   
-
+                    TableName = txtTBL.Text,
+                    total = double.Parse(lblTotal.Text)
                 };
-                
+
                 context.tblMains.Add(main);
 
                 context.SaveChanges();
                 MessageBox.Show("Thêm Thành Công!");
             }
-            
 
         }
 

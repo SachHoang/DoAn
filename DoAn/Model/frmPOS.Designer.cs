@@ -84,10 +84,11 @@
             // 
             // txtTBL
             // 
-            this.txtTBL.Location = new System.Drawing.Point(1026, 37);
+            this.txtTBL.Location = new System.Drawing.Point(1022, 37);
             this.txtTBL.Name = "txtTBL";
-            this.txtTBL.Size = new System.Drawing.Size(100, 26);
+            this.txtTBL.Size = new System.Drawing.Size(100, 30);
             this.txtTBL.TabIndex = 4;
+            this.txtTBL.Visible = false;
             // 
             // label1
             // 
@@ -96,7 +97,7 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(152, 38);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 37);
+            this.label1.Size = new System.Drawing.Size(81, 45);
             this.label1.TabIndex = 1;
             this.label1.Text = "POS";
             // 
@@ -149,7 +150,7 @@
             this.lblTable.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblTable.Location = new System.Drawing.Point(899, 29);
             this.lblTable.Name = "lblTable";
-            this.lblTable.Size = new System.Drawing.Size(88, 37);
+            this.lblTable.Size = new System.Drawing.Size(108, 45);
             this.lblTable.TabIndex = 1;
             this.lblTable.Text = "TABLE";
             // 
@@ -191,7 +192,7 @@
             this.label5.ForeColor = System.Drawing.Color.Transparent;
             this.label5.Location = new System.Drawing.Point(1272, 15);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(76, 37);
+            this.label5.Size = new System.Drawing.Size(91, 45);
             this.label5.TabIndex = 1;
             this.label5.Text = "ToTal";
             // 
@@ -203,7 +204,7 @@
             this.lblTotal.ForeColor = System.Drawing.Color.Transparent;
             this.lblTotal.Location = new System.Drawing.Point(1379, 15);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(68, 37);
+            this.lblTotal.Size = new System.Drawing.Size(81, 45);
             this.lblTotal.TabIndex = 1;
             this.lblTotal.Text = "0,00";
             // 
@@ -324,7 +325,7 @@
             // 
             this.txtSearch.Location = new System.Drawing.Point(208, 129);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(223, 26);
+            this.txtSearch.Size = new System.Drawing.Size(223, 30);
             this.txtSearch.TabIndex = 4;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
@@ -364,7 +365,7 @@
             // 
             // frmPOS
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1473, 667);
             this.Controls.Add(this.panel2);
