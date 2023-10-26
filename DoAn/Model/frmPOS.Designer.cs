@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPOS));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtTBL = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnDin = new System.Windows.Forms.Button();
             this.btnBill = new System.Windows.Forms.Button();
@@ -54,7 +55,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnSave = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.txtTable = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -67,7 +67,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
-            this.panel1.Controls.Add(this.txtTable);
+            this.panel1.Controls.Add(this.txtTBL);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.btnDin);
             this.panel1.Controls.Add(this.btnBill);
@@ -82,6 +82,13 @@
             this.panel1.Size = new System.Drawing.Size(1473, 102);
             this.panel1.TabIndex = 0;
             // 
+            // txtTBL
+            // 
+            this.txtTBL.Location = new System.Drawing.Point(1026, 37);
+            this.txtTBL.Name = "txtTBL";
+            this.txtTBL.Size = new System.Drawing.Size(100, 26);
+            this.txtTBL.TabIndex = 4;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -89,7 +96,7 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(152, 38);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 45);
+            this.label1.Size = new System.Drawing.Size(66, 37);
             this.label1.TabIndex = 1;
             this.label1.Text = "POS";
             // 
@@ -142,7 +149,7 @@
             this.lblTable.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblTable.Location = new System.Drawing.Point(899, 29);
             this.lblTable.Name = "lblTable";
-            this.lblTable.Size = new System.Drawing.Size(108, 45);
+            this.lblTable.Size = new System.Drawing.Size(88, 37);
             this.lblTable.TabIndex = 1;
             this.lblTable.Text = "TABLE";
             // 
@@ -181,9 +188,10 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label5.Location = new System.Drawing.Point(1106, 31);
+            this.label5.ForeColor = System.Drawing.Color.Transparent;
+            this.label5.Location = new System.Drawing.Point(1272, 15);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(91, 45);
+            this.label5.Size = new System.Drawing.Size(76, 37);
             this.label5.TabIndex = 1;
             this.label5.Text = "ToTal";
             // 
@@ -192,9 +200,10 @@
             this.lblTotal.AutoSize = true;
             this.lblTotal.BackColor = System.Drawing.Color.Transparent;
             this.lblTotal.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblTotal.Location = new System.Drawing.Point(1241, 15);
+            this.lblTotal.ForeColor = System.Drawing.Color.Transparent;
+            this.lblTotal.Location = new System.Drawing.Point(1379, 15);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(81, 45);
+            this.lblTotal.Size = new System.Drawing.Size(68, 37);
             this.lblTotal.TabIndex = 1;
             this.lblTotal.Text = "0,00";
             // 
@@ -315,7 +324,7 @@
             // 
             this.txtSearch.Location = new System.Drawing.Point(208, 129);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(223, 30);
+            this.txtSearch.Size = new System.Drawing.Size(223, 26);
             this.txtSearch.TabIndex = 4;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
@@ -335,7 +344,7 @@
             // 
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.Location = new System.Drawing.Point(899, 31);
+            this.btnSave.Location = new System.Drawing.Point(787, 16);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(108, 45);
             this.btnSave.TabIndex = 2;
@@ -353,16 +362,9 @@
             this.pictureBox2.TabIndex = 5;
             this.pictureBox2.TabStop = false;
             // 
-            // txtTable
-            // 
-            this.txtTable.Location = new System.Drawing.Point(1026, 37);
-            this.txtTable.Name = "txtTable";
-            this.txtTable.Size = new System.Drawing.Size(100, 30);
-            this.txtTable.TabIndex = 4;
-            // 
             // frmPOS
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1473, 667);
             this.Controls.Add(this.panel2);
@@ -420,6 +422,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvAmount;
-        private System.Windows.Forms.TextBox txtTable;
+        private System.Windows.Forms.TextBox txtTBL;
     }
 }

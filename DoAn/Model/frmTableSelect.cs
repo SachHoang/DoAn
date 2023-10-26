@@ -44,6 +44,7 @@ namespace DoAn.Model
         private void b_Click(object sender, EventArgs e)
         {
             TableName = (sender as Button).Text.ToString();
+            this.DialogResult = DialogResult.OK;
             this.Close();
         }
 

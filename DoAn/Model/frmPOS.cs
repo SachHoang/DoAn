@@ -200,9 +200,9 @@ namespace DoAn.Model
 
         private void btnNew_Click(object sender, EventArgs e)
         {
-            txtTable.Text = "";
+            txtTBL.Text = "";
            // lblWaiter.Text = "";
-            txtTable.Visible = false;
+            txtTBL.Visible = false;
           //  lblWaiter.Visible = false;
             dataGridView1.Rows.Clear();
             MainID = 0;
@@ -217,24 +217,21 @@ namespace DoAn.Model
       
         private void btnDin_Click(object sender, EventArgs e)
         {
-            //Can tao form de chon ban va nguoi phuc vu
-            
+            //Can tao form de chon ban 
 
             frmTableSelect frm = new frmTableSelect();
-            AddControl(frm);
-            if (frm.TableName != "") 
+
+            if (frm.ShowDialog() == DialogResult.OK) // Đảm bảo rằng bạn đã chọn bàn và nhấn OK trên frmTableSelect
             {
-                txtTable.Text = frm.TableName;
-                txtTable.Visible = true;
+                string selectedTable = frm.TableName; // Lấy tên bàn đã chọn
+
+                if (!string.IsNullOrEmpty(selectedTable))
+                {
+                    txtTBL.Text = selectedTable; // Gán tên bàn vào TextBox txtTBL
+                }
             }
 
-            else
-            {   
-                txtTable.Text = "";
-                txtTable.Visible = false;
-            }
-            
-  
+
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -242,11 +239,12 @@ namespace DoAn.Model
 
             using (var context = new Model1())
             {
+                
                 tblMain main = new tblMain
                 {
 
                    
-                    TableName =txtTable.ToString(),
+                    TableName =txtTBL.Text,
 
                     total =  double.Parse(lblTotal.Text)   
 

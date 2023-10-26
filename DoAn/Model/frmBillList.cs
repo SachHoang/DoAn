@@ -31,6 +31,7 @@ namespace DoAn.Model
             }
         }
 
+
         private void frmBillList_Load(object sender, EventArgs e)
         {
             Model1 context = new Model1();
