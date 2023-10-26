@@ -33,6 +33,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblName = new System.Windows.Forms.Label();
             this.txtImage = new System.Windows.Forms.PictureBox();
+            this.lblPrice = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtImage)).BeginInit();
@@ -44,14 +45,14 @@
             this.panel1.Controls.Add(this.txtImage);
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(201, 183);
+            this.panel1.Size = new System.Drawing.Size(201, 168);
             this.panel1.TabIndex = 0;
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.lblName);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 127);
+            this.panel2.Location = new System.Drawing.Point(0, 112);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(201, 56);
             this.panel2.TabIndex = 1;
@@ -59,7 +60,7 @@
             // lblName
             // 
             this.lblName.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblName.Location = new System.Drawing.Point(0, 0);
+            this.lblName.Location = new System.Drawing.Point(4, 5);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(198, 56);
             this.lblName.TabIndex = 0;
@@ -78,12 +79,23 @@
             this.txtImage.TabStop = false;
             this.txtImage.Click += new System.EventHandler(this.txtImage_Click);
             // 
+            // lblPrice
+            // 
+            this.lblPrice.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrice.Location = new System.Drawing.Point(3, 174);
+            this.lblPrice.Name = "lblPrice";
+            this.lblPrice.Size = new System.Drawing.Size(198, 31);
+            this.lblPrice.TabIndex = 1;
+            this.lblPrice.Text = "Price";
+            this.lblPrice.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // ucProduct
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.Controls.Add(this.lblPrice);
             this.Controls.Add(this.panel1);
             this.Name = "ucProduct";
-            this.Size = new System.Drawing.Size(208, 189);
+            this.Size = new System.Drawing.Size(208, 208);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtImage)).EndInit();
@@ -97,5 +109,6 @@
         private System.Windows.Forms.PictureBox txtImage;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Label lblPrice;
     }
 }

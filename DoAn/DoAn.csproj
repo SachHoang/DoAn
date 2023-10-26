@@ -92,6 +92,7 @@
     <Compile Include="Database\Product.cs" />
     <Compile Include="Database\Staff.cs" />
     <Compile Include="Database\table.cs" />
+    <Compile Include="Database\tblDetail.cs" />
     <Compile Include="Database\tblMain.cs" />
     <Compile Include="Database\user.cs" />
     <Compile Include="frmCategoryEdit.cs">

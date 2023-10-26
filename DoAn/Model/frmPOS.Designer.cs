@@ -180,7 +180,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label5.ForeColor = System.Drawing.Color.Transparent;
-            this.label5.Location = new System.Drawing.Point(1272, 15);
+            this.label5.Location = new System.Drawing.Point(1228, 21);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(91, 45);
             this.label5.TabIndex = 1;
@@ -192,7 +192,7 @@
             this.lblTotal.BackColor = System.Drawing.Color.Transparent;
             this.lblTotal.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblTotal.ForeColor = System.Drawing.Color.Transparent;
-            this.lblTotal.Location = new System.Drawing.Point(1379, 15);
+            this.lblTotal.Location = new System.Drawing.Point(1325, 21);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(81, 45);
             this.lblTotal.TabIndex = 1;
@@ -335,7 +335,7 @@
             // 
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.Location = new System.Drawing.Point(787, 16);
+            this.btnSave.Location = new System.Drawing.Point(937, 28);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(108, 45);
             this.btnSave.TabIndex = 2;

@@ -19,7 +19,11 @@ namespace DoAn.Model
         }
 
         public int id { get; set; }
-        public String PPrice {  get; set; }
+        public String PPrice 
+        {  
+            get {  return lblPrice.Text; }
+            set { lblPrice.Text = value ; }
+        }
 
 
         public string PCategory { get; set; }
@@ -27,13 +31,15 @@ namespace DoAn.Model
         {
             get { return lblName.Text; }
             set { lblName.Text = value; }
+           
         }
+        
 
-        public Image PImage
+       /* public Image PImage
         {
             get { return txtImage.Image; }
             set { txtImage.Image = value; }
-        }
+        }*/
 
         private void txtImage_Click(object sender, EventArgs e)
         {

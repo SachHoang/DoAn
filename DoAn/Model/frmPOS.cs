@@ -43,7 +43,7 @@ namespace DoAn.Model
             using (var context = new Model1()) // Thay thế "MyDbContext" bằng tên của DbContext của bạn
             {
                 var categories = context.categories.ToList();
-
+                
                 CategoryPanel.Controls.Clear();
 
                 foreach (var category in categories)
@@ -51,6 +51,7 @@ namespace DoAn.Model
                     Button button = new Button();
                     button.Text = category.catName;
                     button.Size = new Size(134, 45);
+                   
                  //   button.Location = new Point(x, y); // Thay x và y bằng vị trí cụ thể trên giao diện
                     CategoryPanel.Controls.Add(button);
                     //event for click
