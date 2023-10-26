@@ -82,27 +82,7 @@ namespace DoAn.Model
 
             };
             ProductPanel.Controls.Add(w);
-            /*w.onSelect += (ss, ee) =>
-            {
-                var wdg = (ucProduct)ss;
-                foreach (DataGridViewRow item in dataGridView1.Rows)
-                {
-                    //Kiem tra san pham da co roi cap nhat va up date
-                    if (Convert.ToInt32(item.Cells["dgvid"].Value) == wdg.id)
-                    {
-                        item.Cells["dgvQty"].Value = int.Parse(item.Cells["dgvQty"].Value.ToString() +1);
-                        item.Cells["dgvAmount"].Value = int.Parse(item.Cells["dgvQty"].Value.ToString()) *
-                                                        double.Parse(item.Cells["dvgPrice"].Value.ToString());
 
-                        return;
-                    }
-                  
-                }
-                //them 1 san pham moi
-                dataGridView1.Rows.Add(new object[] { 0, wdg.id, wdg.PName, 1, wdg.PPrice, wdg.PPrice, wdg.PPrice });
-                //Total
-                GetTotal();
-            }; */
             w.onSelect += (ss, ee) =>
             {
                 var wdg = (ucProduct)ss;
@@ -202,11 +182,11 @@ namespace DoAn.Model
         {
             txtTBL.Text = "";
            // lblWaiter.Text = "";
-            txtTBL.Visible = false;
+            txtTBL.Visible = true;
           //  lblWaiter.Visible = false;
             dataGridView1.Rows.Clear();
             MainID = 0;
-            lblTotal.Text = "00";
+            lblTotal.Text = "0,00";
         }
 
         public void AddControl(Form f)
@@ -249,12 +229,14 @@ namespace DoAn.Model
                     total =  double.Parse(lblTotal.Text)   
 
                 };
-
+                
                 context.tblMains.Add(main);
 
                 context.SaveChanges();
                 MessageBox.Show("Thêm Thành Công!");
             }
+            
+
         }
 
         private void btnBill_Click(object sender, EventArgs e)

@@ -20,5 +20,9 @@ namespace DoAn.Database
         public double? Price { get; set; }
 
         public double? amount { get; set; }
+
+        public virtual Product Product { get; set; }
+
+        public virtual tblMain tblMain { get; set; }
     }
 }
