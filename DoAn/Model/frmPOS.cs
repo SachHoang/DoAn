@@ -180,9 +180,9 @@ namespace DoAn.Model
 
         private void btnNew_Click(object sender, EventArgs e)
         {
-            txtTBL.Text = "";
+            lblTable.Text = "TABLE  ";
            // lblWaiter.Text = "";
-            txtTBL.Visible = true;
+         /*   lblTable.Visible = true;*/
           //  lblWaiter.Visible = false;
             dataGridView1.Rows.Clear();
             MainID = 0;
@@ -207,7 +207,7 @@ namespace DoAn.Model
 
                 if (!string.IsNullOrEmpty(selectedTable))
                 {
-                    txtTBL.Text = selectedTable; // Gán tên bàn vào TextBox txtTBL
+                    lblTable.Text = selectedTable; // Gán tên bàn vào TextBox txtTBL
                 }
                 else
                 {
@@ -219,7 +219,7 @@ namespace DoAn.Model
         private void btnSave_Click(object sender, EventArgs e)
         {           
 
-            if (string.IsNullOrEmpty(txtTBL.Text))
+            if (lblTable.Text== null || lblTable.Text == "TABLE")
             {
                 MessageBox.Show("Vui lòng chọn một bàn trước khi lưu hóa đơn.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -229,7 +229,7 @@ namespace DoAn.Model
             {
                 tblMain main = new tblMain
                 {
-                    TableName = txtTBL.Text,
+                    TableName = lblTable.Text,
                     total = double.Parse(lblTotal.Text)
                 };
 

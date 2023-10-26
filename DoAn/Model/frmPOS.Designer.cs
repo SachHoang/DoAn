@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPOS));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtTBL = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnDin = new System.Windows.Forms.Button();
             this.btnBill = new System.Windows.Forms.Button();
@@ -67,7 +66,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
-            this.panel1.Controls.Add(this.txtTBL);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.btnDin);
             this.panel1.Controls.Add(this.btnBill);
@@ -81,14 +79,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1473, 102);
             this.panel1.TabIndex = 0;
-            // 
-            // txtTBL
-            // 
-            this.txtTBL.Location = new System.Drawing.Point(1022, 37);
-            this.txtTBL.Name = "txtTBL";
-            this.txtTBL.Size = new System.Drawing.Size(100, 30);
-            this.txtTBL.TabIndex = 4;
-            this.txtTBL.Visible = false;
             // 
             // label1
             // 
@@ -423,6 +413,5 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvAmount;
-        private System.Windows.Forms.TextBox txtTBL;
     }
 }

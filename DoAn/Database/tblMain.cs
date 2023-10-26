@@ -9,12 +9,6 @@ namespace DoAn.Database
     [Table("tblMain")]
     public partial class tblMain
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public tblMain()
-        {
-            tblDetails = new HashSet<tblDetail>();
-        }
-
         [Key]
         public int MainID { get; set; }
 
@@ -29,8 +23,5 @@ namespace DoAn.Database
 
         [StringLength(15)]
         public string aTime { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<tblDetail> tblDetails { get; set; }
     }
 }

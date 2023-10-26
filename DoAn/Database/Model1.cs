@@ -16,7 +16,6 @@ namespace DoAn.Database
         public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<Staff> Staffs { get; set; }
         public virtual DbSet<table> tables { get; set; }
-        public virtual DbSet<tblDetail> tblDetails { get; set; }
         public virtual DbSet<tblMain> tblMains { get; set; }
         public virtual DbSet<user> users { get; set; }
 
@@ -26,11 +25,6 @@ namespace DoAn.Database
                 .HasMany(e => e.Products)
                 .WithRequired(e => e.category)
                 .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<Product>()
-                .HasMany(e => e.tblDetails)
-                .WithOptional(e => e.Product)
-                .HasForeignKey(e => e.proID);
 
             modelBuilder.Entity<tblMain>()
                 .Property(e => e.aTime)
