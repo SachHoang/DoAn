@@ -13,10 +13,8 @@ namespace DoAn.Database
         }
 
         public virtual DbSet<category> categories { get; set; }
-        public virtual DbSet<Detail> Details { get; set; }
         public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<Staff> Staffs { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<table> tables { get; set; }
         public virtual DbSet<tblDetail> tblDetails { get; set; }
         public virtual DbSet<tblMain> tblMains { get; set; }
