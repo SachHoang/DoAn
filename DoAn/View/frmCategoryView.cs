@@ -24,22 +24,17 @@ namespace DoAn.View
 
 
         private void LoadData(List<category> sv1)
-        {           
-
+        {
+            
             dgvCategory.Rows.Clear();
+            int stt = 1; // Bắt đầu với STT là 1
             foreach (var sv in sv1)
             {
-                for (int i = 0; i < dgvCategory.Rows.Count; i++)
-                {
-                    dgvCategory.Rows[i].Cells[0].Value = i + 1;
-                }
                 int index = dgvCategory.Rows.Add();
-                for (int i = 0; i < dgvCategory.Rows.Count; i++)
-                {
-                    dgvCategory.Rows[i].Cells[0].Value = i + 1;
-                }
+                dgvCategory.Rows[index].Cells[0].Value = stt; // Cập nhật STT cho dòng hiện tại
                 dgvCategory.Rows[index].Cells[1].Value = sv.catID;
-                dgvCategory.Rows[index].Cells[2].Value = sv.catName;               
+                dgvCategory.Rows[index].Cells[2].Value = sv.catName;
+                stt++; // Tăng STT cho dòng tiếp theo
             }
         }
 

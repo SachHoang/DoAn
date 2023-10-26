@@ -23,17 +23,15 @@ namespace DoAn.View
         {
 
             dgvProduct.Rows.Clear();
-            foreach (var pro in products)
+            int stt = 1; // Bắt đầu với STT là 1
+            foreach (var sv in products)
             {
                 int index = dgvProduct.Rows.Add();
-
-                dgvProduct.Rows[index].Cells[0].Value = pro.ProductID;
-
-                dgvProduct.Rows[index].Cells[1].Value = pro.pName;
-                dgvProduct.Rows[index].Cells[2].Value = pro.Price;
-               
-                dgvProduct.Rows[index].Cells[3].Value = pro.category.catName;
-            
+                dgvProduct.Rows[index].Cells[0].Value = stt; // Cập nhật STT cho dòng hiện tại
+                dgvProduct.Rows[index].Cells[1].Value = sv.pName;
+                dgvProduct.Rows[index].Cells[2].Value = sv.Price;
+                dgvProduct.Rows[index].Cells[3].Value = sv.category.catName;
+                stt++; // Tăng STT cho dòng tiếp theo
             }
         }
 

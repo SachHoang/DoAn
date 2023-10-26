@@ -30,11 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTableView));
             this.dgvTable = new System.Windows.Forms.DataGridView();
+            this.btnDelete = new System.Windows.Forms.PictureBox();
+            this.btnUpdate = new System.Windows.Forms.PictureBox();
             this.dgvSno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnDelete = new System.Windows.Forms.PictureBox();
-            this.btnUpdate = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.btnAdd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTable)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).BeginInit();
@@ -74,27 +74,6 @@
             this.dgvTable.Size = new System.Drawing.Size(833, 308);
             this.dgvTable.TabIndex = 4;
             // 
-            // dgvSno
-            // 
-            this.dgvSno.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dgvSno.FillWeight = 70F;
-            this.dgvSno.HeaderText = "STT";
-            this.dgvSno.MinimumWidth = 70;
-            this.dgvSno.Name = "dgvSno";
-            this.dgvSno.Width = 70;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Mã Bàn";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Tên Bàn";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            // 
             // btnDelete
             // 
             this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
@@ -116,6 +95,28 @@
             this.btnUpdate.TabIndex = 6;
             this.btnUpdate.TabStop = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click_1);
+            // 
+            // dgvSno
+            // 
+            this.dgvSno.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dgvSno.FillWeight = 70F;
+            this.dgvSno.HeaderText = "STT";
+            this.dgvSno.MinimumWidth = 70;
+            this.dgvSno.Name = "dgvSno";
+            this.dgvSno.Width = 70;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Table ID";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.Visible = false;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Table Name";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
             // 
             // frmTableView
             // 
@@ -147,10 +148,10 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvTable;
+        private System.Windows.Forms.PictureBox btnDelete;
+        private System.Windows.Forms.PictureBox btnUpdate;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvSno;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.PictureBox btnDelete;
-        private System.Windows.Forms.PictureBox btnUpdate;
     }
 }

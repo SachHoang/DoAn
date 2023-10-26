@@ -20,20 +20,18 @@ namespace DoAn.View
         }
 
         private void LoadData(List<Staff> staffs)
-        {
-
+        {           
             dgvStaff.Rows.Clear();
-            foreach (var sff in staffs)
+            int sff = 1; // Bắt đầu với STT là 1
+            foreach (var sv in staffs)
             {
-                
                 int index = dgvStaff.Rows.Add();
-
-                dgvStaff.Rows[index].Cells[0].Value = sff.ID;
-
-                dgvStaff.Rows[index].Cells[1].Value = sff.Name;
-                dgvStaff.Rows[index].Cells[2].Value = sff.Phone;
-                dgvStaff.Rows[index].Cells[3].Value = sff.Role;
-                dgvStaff.Rows[index].Cells[4].Value = sff.Address;
+                dgvStaff.Rows[index].Cells[0].Value = sff; // Cập nhật STT cho dòng hiện tại
+                dgvStaff.Rows[index].Cells[1].Value = sv.Name;
+                dgvStaff.Rows[index].Cells[2].Value = sv.Phone;
+                dgvStaff.Rows[index].Cells[3].Value = sv.Role;
+                dgvStaff.Rows[index].Cells[4].Value = sv.Address;
+                sff++; // Tăng STT cho dòng tiếp theo
             }
         }
 

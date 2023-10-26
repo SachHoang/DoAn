@@ -22,19 +22,14 @@ namespace DoAn.View
         {
 
             dgvTable.Rows.Clear();
+            int stt = 1; // Bắt đầu với STT là 1
             foreach (var sv in sv1)
             {
-                for (int i = 0; i < dgvTable.Rows.Count; i++)
-                {
-                    dgvTable.Rows[i].Cells[0].Value = i + 1;
-                }
                 int index = dgvTable.Rows.Add();
-                for (int i = 0; i < dgvTable.Rows.Count; i++)
-                {
-                    dgvTable.Rows[i].Cells[0].Value = i + 1;
-                }
+                dgvTable.Rows[index].Cells[0].Value = stt; // Cập nhật STT cho dòng hiện tại
                 dgvTable.Rows[index].Cells[1].Value = sv.tid;
                 dgvTable.Rows[index].Cells[2].Value = sv.tname;
+                stt++; // Tăng STT cho dòng tiếp theo
             }
         }
 
