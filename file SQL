@@ -1,0 +1,114 @@
+create database DoAn
+use
+use DoAn
+go
+create table users
+(
+	userID int primary key identity,
+	username varchar(50) not null,
+	upass varchar(10) not null,
+	uName varchar(50) not null,
+	uPhone varchar(20)
+)
+
+insert into  users values ('admin', 123, ' Admin', '12312312'),
+						  ('1',1,'Waiter','213');
+
+
+Create table category
+(
+	catID int primary key,
+	catName nvarchar(50),
+)
+INSERT INTO category(catID,catName)
+VALUES
+		('1',	N'Món Chính'),
+		('2',	N'Món Nước'),
+		('3',	N'Món Khai Vị'),
+		('4',	N'Món Tráng Miệng');
+
+CREATE TABLE Staff (
+  ID NVARCHAR(10) PRIMARY KEY,
+  Name NVARCHAR(255) NOT NULL,
+  Phone NVARCHAR(255) NOT NULL,
+  Address NVARCHAR(255) NOT NULL,
+  Role NVARCHAR(100) NOT NULL
+);
+INSERT INTO Staff (ID, Name, Phone, Address,Role)
+VALUES ('NV001',N'Nguyễn Văn A', '0123456789', N'123 đường Trần Hưng Đạo','Waiter'),
+	   ('NV002',N'Trần Thế B', '098765432', N'111 đường Phạm Văn Đồng','Waiter');
+
+
+create table tables 
+(
+	tid int primary key identity,
+	tname nvarchar(50),
+)
+INSERT INTO tables (tname)
+VALUES	
+(N'Bàn 1'),
+(N'Bàn 2'),
+(N'Bàn 3'),
+(N'Bàn 4'),
+(N'Bàn 5'),
+(N'Bàn 6'),
+(N'Bàn 7'),
+(N'Bàn 8'),
+(N'Bàn 9'),
+(N'Bàn 10');
+
+CREATE TABLE Product
+(
+	ProductID INT PRIMARY KEY ,
+	pName NVARCHAR(255) NOT NULL,
+	Price INT NOT NULL,
+	catID INT NOT NULL,
+	
+	FOREIGN KEY (catID)REFERENCES category(catID)
+)
+
+INSERT INTO Product (ProductID,pName ,Price, catID)
+VALUES 
+(1,	N'Cua Hoàng Đế',	1000000,	1),
+(2,	N'Lẩu Bò Lá Giang',	300000,	1),
+(3,	N'Bún Bò Huế	',50000,	2	),
+(4,	N'Gỏi ngó sen tôm thịt',	35000,	3	),
+(5,	N'Gỏi bưởi tôm mực',	40000,	3),
+(6,	N'Bún mọc',	50000,	2),
+(7,	N'Hàu đút lò phô mai',	120000,	1),
+(8,	N'Tôm càng rang muối',	190000,	1),
+(9,	N'Bò sốt vang',	200000,	1),
+(10,N'Cá hồi nướng mè',	150000,	1),
+(11,N'Bánh su với kem phomai hạt dẻ',	20000,	4),
+(12,N'Bánh xốp Macaron vị trà xanh',	25000,	4),
+(13,N'Bánh Mousse chanh dây',	20000,	4),
+(14,N'Lẩu Gà Lá Giang',	300000,	1),
+(15,N'Lẩu Gà Lá É',	300000,	1);
+
+CREATE TABLE tblMain
+(
+	MainID INT Primary key identity,
+	TableName Nvarchar(50) Not null,
+	total Float not null,
+	aDate date,
+	aTime varchar(15)
+)
+
+DELETE FROM tblMain;
+DBCC CHECKIDENT ('tblMain', RESEED, 0);
+
+
+INSERT INTO tblMain(TableName,total)
+VAlUES (N'Bàn 1',5000000);
+
+CREATE TABLE tblDetails
+(
+	DetailID int Primary key identity,
+	MainID int,
+	proID int,
+	qty int,
+	Price float,
+	amount float
+)
+
+
