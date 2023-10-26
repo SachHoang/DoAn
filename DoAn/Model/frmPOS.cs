@@ -180,7 +180,7 @@ namespace DoAn.Model
 
         private void btnNew_Click(object sender, EventArgs e)
         {
-            lblTable.Text = "TABLE  ";
+            lblTable.Text = "TABLE";
            // lblWaiter.Text = "";
          /*   lblTable.Visible = true;*/
           //  lblWaiter.Visible = false;
