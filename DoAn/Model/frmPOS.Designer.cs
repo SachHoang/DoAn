@@ -28,18 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPOS));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtTBL = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnDin = new System.Windows.Forms.Button();
-            this.btnKot = new System.Windows.Forms.Button();
             this.btnBill = new System.Windows.Forms.Button();
             this.btnNew = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblTable = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label5 = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
             this.CategoryPanel = new System.Windows.Forms.FlowLayoutPanel();
@@ -53,26 +52,27 @@
             this.dgvPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtSearch = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnSave = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.flowLayoutPanel1.SuspendLayout();
             this.CategoryPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
+            this.panel1.Controls.Add(this.txtTBL);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.btnDin);
-            this.panel1.Controls.Add(this.btnKot);
             this.panel1.Controls.Add(this.btnBill);
             this.panel1.Controls.Add(this.btnNew);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.lblTable);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.btnExit);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -82,6 +82,13 @@
             this.panel1.Size = new System.Drawing.Size(1473, 102);
             this.panel1.TabIndex = 0;
             // 
+            // txtTBL
+            // 
+            this.txtTBL.Location = new System.Drawing.Point(1026, 37);
+            this.txtTBL.Name = "txtTBL";
+            this.txtTBL.Size = new System.Drawing.Size(100, 26);
+            this.txtTBL.TabIndex = 4;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -89,7 +96,7 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(152, 38);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 45);
+            this.label1.Size = new System.Drawing.Size(66, 37);
             this.label1.TabIndex = 1;
             this.label1.Text = "POS";
             // 
@@ -98,35 +105,20 @@
             this.btnDin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(85)))), ((int)(((byte)(126)))));
             this.btnDin.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnDin.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnDin.Image = global::DoAn.Properties.Resources.Dan_in;
-            this.btnDin.Location = new System.Drawing.Point(876, 11);
+            this.btnDin.Location = new System.Drawing.Point(688, 18);
             this.btnDin.Name = "btnDin";
             this.btnDin.Size = new System.Drawing.Size(131, 81);
             this.btnDin.TabIndex = 2;
             this.btnDin.Text = "Din in";
             this.btnDin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnDin.UseVisualStyleBackColor = false;
-            // 
-            // btnKot
-            // 
-            this.btnKot.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(85)))), ((int)(((byte)(126)))));
-            this.btnKot.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnKot.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnKot.Image = global::DoAn.Properties.Resources.kk;
-            this.btnKot.Location = new System.Drawing.Point(674, 11);
-            this.btnKot.Name = "btnKot";
-            this.btnKot.Size = new System.Drawing.Size(146, 81);
-            this.btnKot.TabIndex = 2;
-            this.btnKot.Text = "KOT";
-            this.btnKot.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnKot.UseVisualStyleBackColor = false;
+            this.btnDin.Click += new System.EventHandler(this.btnDin_Click);
             // 
             // btnBill
             // 
             this.btnBill.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(85)))), ((int)(((byte)(126)))));
             this.btnBill.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnBill.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnBill.Image = global::DoAn.Properties.Resources.BILL;
             this.btnBill.Location = new System.Drawing.Point(497, 12);
             this.btnBill.Name = "btnBill";
             this.btnBill.Size = new System.Drawing.Size(131, 81);
@@ -134,13 +126,13 @@
             this.btnBill.Text = "Bill List";
             this.btnBill.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnBill.UseVisualStyleBackColor = false;
+            this.btnBill.Click += new System.EventHandler(this.btnBill_Click);
             // 
             // btnNew
             // 
             this.btnNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(85)))), ((int)(((byte)(126)))));
             this.btnNew.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnNew.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnNew.Image = global::DoAn.Properties.Resources._new;
             this.btnNew.Location = new System.Drawing.Point(320, 11);
             this.btnNew.Name = "btnNew";
             this.btnNew.Size = new System.Drawing.Size(131, 81);
@@ -148,38 +140,25 @@
             this.btnNew.Text = "New";
             this.btnNew.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnNew.UseVisualStyleBackColor = false;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
-            // label4
+            // lblTable
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(2398, 48);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(81, 45);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "POS";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(1092, 57);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(134, 45);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "WAITER";
+            this.lblTable.AutoSize = true;
+            this.lblTable.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblTable.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblTable.Location = new System.Drawing.Point(899, 29);
+            this.lblTable.Name = "lblTable";
+            this.lblTable.Size = new System.Drawing.Size(88, 37);
+            this.lblTable.TabIndex = 1;
+            this.lblTable.Text = "TABLE";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(1092, 12);
+            this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(108, 45);
-            this.label2.TabIndex = 1;
+            this.label2.Size = new System.Drawing.Size(100, 23);
+            this.label2.TabIndex = 3;
             this.label2.Text = "TABLE";
             // 
             // btnExit
@@ -204,27 +183,15 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
-            this.flowLayoutPanel1.Controls.Add(this.label5);
-            this.flowLayoutPanel1.Controls.Add(this.lblTotal);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.flowLayoutPanel1.Enabled = false;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 572);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1473, 95);
-            this.flowLayoutPanel1.TabIndex = 0;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(3, 0);
+            this.label5.ForeColor = System.Drawing.Color.Transparent;
+            this.label5.Location = new System.Drawing.Point(1272, 15);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(91, 45);
+            this.label5.Size = new System.Drawing.Size(76, 37);
             this.label5.TabIndex = 1;
             this.label5.Text = "ToTal";
             // 
@@ -233,10 +200,10 @@
             this.lblTotal.AutoSize = true;
             this.lblTotal.BackColor = System.Drawing.Color.Transparent;
             this.lblTotal.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblTotal.ForeColor = System.Drawing.Color.White;
-            this.lblTotal.Location = new System.Drawing.Point(100, 0);
+            this.lblTotal.ForeColor = System.Drawing.Color.Transparent;
+            this.lblTotal.Location = new System.Drawing.Point(1379, 15);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(81, 45);
+            this.lblTotal.Size = new System.Drawing.Size(68, 37);
             this.lblTotal.TabIndex = 1;
             this.lblTotal.Text = "0,00";
             // 
@@ -357,9 +324,34 @@
             // 
             this.txtSearch.Location = new System.Drawing.Point(208, 129);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(223, 30);
+            this.txtSearch.Size = new System.Drawing.Size(223, 26);
             this.txtSearch.TabIndex = 4;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
+            this.panel2.Controls.Add(this.btnSave);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.lblTotal);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 567);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1473, 100);
+            this.panel2.TabIndex = 6;
+            // 
+            // btnSave
+            // 
+            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
+            this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSave.Location = new System.Drawing.Point(787, 16);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(108, 45);
+            this.btnSave.TabIndex = 2;
+            this.btnSave.Text = "Save Bill";
+            this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // pictureBox2
             // 
@@ -372,11 +364,11 @@
             // 
             // frmPOS
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1473, 667);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.ProductPanel);
@@ -393,10 +385,10 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.flowLayoutPanel1.ResumeLayout(false);
-            this.flowLayoutPanel1.PerformLayout();
             this.CategoryPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -406,14 +398,11 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnDin;
-        private System.Windows.Forms.Button btnKot;
         private System.Windows.Forms.Button btnBill;
         private System.Windows.Forms.Button btnNew;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblTable;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox btnExit;
         private System.Windows.Forms.FlowLayoutPanel CategoryPanel;
@@ -430,6 +419,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvName;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvQty;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvPrice;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvAmount;
+        private System.Windows.Forms.TextBox txtTBL;
     }
 }

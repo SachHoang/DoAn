@@ -13,6 +13,7 @@ using static DoAn.MainClass;
 using DoAn.Database;
 using System.Data.SqlClient;
 using System.IO;
+using System.Xml.Linq;
 
 namespace DoAn.Model
 {
@@ -22,7 +23,7 @@ namespace DoAn.Model
         {
             InitializeComponent();
         }
-
+        public int MainID = 0;
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -165,8 +166,13 @@ namespace DoAn.Model
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-         
+            foreach (var item in ProductPanel.Controls)
+            {
+                var pro = (ucProduct)item;
+                pro.Visible = pro.PName.ToLower().Contains(txtSearch.Text.Trim().ToLower());
+            }
         }
+
 
         //Hien thi ben dataridview
         private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -192,5 +198,68 @@ namespace DoAn.Model
         }
 
 
+        private void btnNew_Click(object sender, EventArgs e)
+        {
+            txtTBL.Text = "";
+           // lblWaiter.Text = "";
+            txtTBL.Visible = false;
+          //  lblWaiter.Visible = false;
+            dataGridView1.Rows.Clear();
+            MainID = 0;
+            lblTotal.Text = "00";
+        }
+
+        public void AddControl(Form f)
+        {
+
+            f.Show();
+        }
+      
+        private void btnDin_Click(object sender, EventArgs e)
+        {
+            //Can tao form de chon ban 
+
+            frmTableSelect frm = new frmTableSelect();
+
+            if (frm.ShowDialog() == DialogResult.OK) // Đảm bảo rằng bạn đã chọn bàn và nhấn OK trên frmTableSelect
+            {
+                string selectedTable = frm.TableName; // Lấy tên bàn đã chọn
+
+                if (!string.IsNullOrEmpty(selectedTable))
+                {
+                    txtTBL.Text = selectedTable; // Gán tên bàn vào TextBox txtTBL
+                }
+            }
+
+
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+
+            using (var context = new Model1())
+            {
+                
+                tblMain main = new tblMain
+                {
+
+                   
+                    TableName =txtTBL.Text,
+
+                    total =  double.Parse(lblTotal.Text)   
+
+                };
+
+                context.tblMains.Add(main);
+
+                context.SaveChanges();
+                MessageBox.Show("Thêm Thành Công!");
+            }
+        }
+
+        private void btnBill_Click(object sender, EventArgs e)
+        {
+            AddControl(new frmBillList());
+        }
     }
 }

@@ -56,8 +56,12 @@
             // 
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(141, 36);
-            this.label1.Size = new System.Drawing.Size(101, 46);
+            this.label1.Size = new System.Drawing.Size(99, 45);
             this.label1.Text = "Table";
+            // 
+            // button2
+            // 
+         
             // 
             // txtName
             // 

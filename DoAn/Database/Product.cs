@@ -20,6 +20,9 @@ namespace DoAn.Database
 
         public int catID { get; set; }
 
+        [Column(TypeName = "image")]
+        public byte[] pImage { get; set; }
+
         public virtual category category { get; set; }
     }
 }
